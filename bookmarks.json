@@ -136,6 +136,22 @@
       "url": "https://console.cloud.tencent.com/edgeone/purge"
     }
   ],
+  "博客": [
+    {
+      "addedAt": "2025-08-11T08:19:55.559Z",
+      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
+      "id": "me6udvdzo4a0nkklnjr",
+      "title": "编程随笔",
+      "url": "https://xiaoying.org.cn/pages/7765ba/#%E4%B8%80-%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98"
+    },
+    {
+      "id": "me6uf2ntfap9yttt42t",
+      "title": "Teek简介 | One",
+      "url": "https://onedayxyy.cn/teek",
+      "description": "",
+      "addedAt": "2025-08-11T08:20:51.641Z"
+    }
+  ],
   "工作": [
     {
       "description": "代码托管平台，用于存储和协作开发项目",
@@ -184,15 +200,6 @@
       "id": "me6ua4su2njc70v5rd8",
       "title": "VitePress",
       "url": "https://vp.xiaoying.org.cn/"
-    }
-  ],
-  "博客": [
-    {
-      "id": "me6udvdzo4a0nkklnjr",
-      "title": "编程随笔",
-      "url": "https://xiaoying.org.cn/pages/7765ba/#%E4%B8%80-%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98",
-      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
-      "addedAt": "2025-08-11T08:19:55.559Z"
     }
   ]
 }
