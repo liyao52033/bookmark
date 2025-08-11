@@ -1,18 +1,18 @@
 {
   "AI": [
     {
-      "addedAt": "2025-04-15T09:58:10.958Z",
-      "description": "github deepwiki",
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "",
       "id": "m8a1aaz28t1fm0tirw4",
-      "title": "deepwiki",
-      "url": "https://deepwiki.com/"
+      "title": "chatgpt",
+      "url": "https://chatgpt.com/"
     },
     {
-      "addedAt": "2025-03-15T09:58:10.958Z",
-      "description": "Keep up-to-date with MCP",
-      "id": "m8a1aaz28t1fm0tirx5",
-      "title": "PulseMCP",
-      "url": "https://www.pulsemcp.com/"
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "",
+      "id": "m8a1aaz28t1fm0claude",
+      "title": "claude",
+      "url": "https://claude.ai/"
     },
     {
       "addedAt": "2025-03-15T09:58:29.734Z",
@@ -20,13 +20,6 @@
       "id": "m8a1apgm3gg06fzvklm",
       "title": "Discover MCP Clients",
       "url": "https://mcp.so/clients"
-    },
-    {
-      "addedAt": "2025-03-15T10:04:27.948Z",
-      "description": "端脑云 - AIGC 应用平台",
-      "id": "m8a1idv0j3r9ik31ya",
-      "title": "Cephalon Cloud",
-      "url": "https://cephalon.cloud/aigc"
     },
     {
       "addedAt": "2025-03-15T10:13:21.379Z",
