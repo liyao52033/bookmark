@@ -172,11 +172,18 @@
   ],
   "组件库": [
     {
+      "addedAt": "2025-08-11T08:16:54.153Z",
+      "description": "基于 Vue 3，面向设计师和开发者的组件库",
       "id": "me6u9zexfafjjxphh8h",
       "title": "Element Plus",
-      "url": "https://element-plus.org/zh-CN/component/overview.html",
-      "description": "基于 Vue 3，面向设计师和开发者的组件库",
-      "addedAt": "2025-08-11T08:16:54.153Z"
+      "url": "https://element-plus.org/zh-CN/component/overview.html"
+    },
+    {
+      "id": "me6ua4su2njc70v5rd8",
+      "title": "VitePress",
+      "url": "https://vp.xiaoying.org.cn/",
+      "description": "",
+      "addedAt": "2025-08-11T08:17:01.134Z"
     }
   ]
 }
