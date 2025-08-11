@@ -127,6 +127,15 @@
       "url": "https://modelscope.cn/organization/qwen"
     }
   ],
+  "云服务": [
+    {
+      "addedAt": "2025-08-11T08:14:54.445Z",
+      "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
+      "id": "me6u7f1pz8npq5nkp1o",
+      "title": "清除缓存 - EdgeOne - 控制台",
+      "url": "https://console.cloud.tencent.com/edgeone/purge"
+    }
+  ],
   "工作": [
     {
       "description": "代码托管平台，用于存储和协作开发项目",
@@ -161,13 +170,13 @@
       "url": "https://trello.com/"
     }
   ],
-  "云服务": [
+  "组件库": [
     {
-      "id": "me6u7f1pz8npq5nkp1o",
-      "title": "清除缓存 - EdgeOne - 控制台",
-      "url": "https://console.cloud.tencent.com/edgeone/purge",
-      "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
-      "addedAt": "2025-08-11T08:14:54.445Z"
+      "id": "me6u9zexfafjjxphh8h",
+      "title": "Element Plus",
+      "url": "https://element-plus.org/zh-CN/component/overview.html",
+      "description": "基于 Vue 3，面向设计师和开发者的组件库",
+      "addedAt": "2025-08-11T08:16:54.153Z"
     }
   ]
 }
