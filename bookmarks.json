@@ -132,7 +132,7 @@
       "addedAt": "2025-08-11T08:14:54.445Z",
       "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
       "id": "me6u7f1pz8npq5nkp1o",
-      "title": "清除缓存 - EdgeOne - 控制台",
+      "title": "EdgeOne",
       "url": "https://console.cloud.tencent.com/edgeone/purge"
     }
   ],
@@ -146,9 +146,9 @@
     },
     {
       "addedAt": "2025-08-11T08:20:51.641Z",
-      "description": "",
+      "description": "采用 Teek VitePress 主题构建，具备文档与博客二合一的功能，整体呈现简约、高效、灵活扩展的风格",
       "id": "me6uf2ntfap9yttt42t",
-      "title": "Teek简介 | One",
+      "title": "One Blog",
       "url": "https://onedayxyy.cn/teek"
     },
     {
@@ -203,7 +203,7 @@
     },
     {
       "addedAt": "2025-08-11T08:17:01.134Z",
-      "description": "",
+      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
       "id": "me6ua4su2njc70v5rd8",
       "title": "VitePress",
       "url": "https://vp.xiaoying.org.cn/"
