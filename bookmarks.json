@@ -179,11 +179,20 @@
       "url": "https://element-plus.org/zh-CN/component/overview.html"
     },
     {
+      "addedAt": "2025-08-11T08:17:01.134Z",
+      "description": "",
       "id": "me6ua4su2njc70v5rd8",
       "title": "VitePress",
-      "url": "https://vp.xiaoying.org.cn/",
-      "description": "",
-      "addedAt": "2025-08-11T08:17:01.134Z"
+      "url": "https://vp.xiaoying.org.cn/"
+    }
+  ],
+  "博客": [
+    {
+      "id": "me6udvdzo4a0nkklnjr",
+      "title": "编程随笔",
+      "url": "https://xiaoying.org.cn/pages/7765ba/#%E4%B8%80-%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98",
+      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
+      "addedAt": "2025-08-11T08:19:55.559Z"
     }
   ]
 }
