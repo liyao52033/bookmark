@@ -63,7 +63,6 @@
       "title": "Codebuddy",
       "url": "https://www.codebuddy.ai/"
     },
-    
     {
       "addedAt": "2025-03-30T12:02:32.711Z",
       "description": "阿里通义千问",
@@ -119,8 +118,8 @@
       "id": "m8a1apgm3gg06fzvklm",
       "title": "MCP.so",
       "url": "https://mcp.so/clients"
-    }, 
-   {
+    },
+    {
       "addedAt": "2025-04-10T09:02:03.408Z",
       "description": "开源模型。海量各模态AI开源模型。一站式模型开发&应用工具。高质量且免费的数据集。丰富有趣的AI应用体验",
       "id": "m9b4q9w0kyiky3plo1",
@@ -161,6 +160,14 @@
       "title": "Trello",
       "url": "https://trello.com/"
     }
+  ],
+  "云服务": [
+    {
+      "id": "me6u7f1pz8npq5nkp1o",
+      "title": "清除缓存 - EdgeOne - 控制台",
+      "url": "https://console.cloud.tencent.com/edgeone/purge",
+      "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
+      "addedAt": "2025-08-11T08:14:54.445Z"
+    }
   ]
 }
-  
