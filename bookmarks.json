@@ -159,11 +159,18 @@
       "url": "https://teek.seasir.top/pages/b7bc0e"
     },
     {
+      "addedAt": "2025-08-11T08:53:41.041Z",
+      "description": "一个结构清晰、技术内容丰富的个人博客，适合关注 Java 与前端开发、后端架构与工具链等领域的读者。",
       "id": "me6vla9d168aygx8j9b",
       "title": "Teeker Blog",
-      "url": "https://notes.teek.top/",
-      "description": "一个结构清晰、技术内容丰富的个人博客，适合关注 Java 与前端开发、后端架构与工具链等领域的读者。",
-      "addedAt": "2025-08-11T08:53:41.041Z"
+      "url": "https://notes.teek.top/"
+    },
+    {
+      "id": "memnjxf41i56kxg1n48",
+      "title": "Index | Algolia",
+      "url": "https://dashboard.algolia.com/apps/NUOZO8HY5R/explorer/browse/vp_xiaoying_org_cn_nuozo8hy5r_pages?searchMode=search",
+      "description": "aloglia搜索",
+      "addedAt": "2025-08-22T09:52:59.632Z"
     }
   ],
   "工作": [
