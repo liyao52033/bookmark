@@ -134,6 +134,13 @@
       "id": "me6u7f1pz8npq5nkp1o",
       "title": "EdgeOne",
       "url": "https://console.cloud.tencent.com/edgeone/purge"
+    },
+    {
+      "id": "mf4u6adhyt7adeq9zm",
+      "title": "Supabase部署",
+      "url": "https://www.hangge.com/blog/cache/detail_3408.html",
+      "description": "Docker - 后端即服务平台Supabase的私有化部署教程",
+      "addedAt": "2025-09-04T03:18:11.717Z"
     }
   ],
   "博客": [
@@ -166,11 +173,11 @@
       "url": "https://notes.teek.top/"
     },
     {
+      "addedAt": "2025-08-22T09:52:59.632Z",
+      "description": "aloglia搜索",
       "id": "memnjxf41i56kxg1n48",
       "title": "Algolia",
-      "url": "https://dashboard.algolia.com/apps/ATLKN4M9QW/explorer/browse/blog",
-      "description": "aloglia搜索",
-      "addedAt": "2025-08-22T09:52:59.632Z"
+      "url": "https://dashboard.algolia.com/apps/ATLKN4M9QW/explorer/browse/blog"
     }
   ],
   "工作": [
