@@ -214,6 +214,22 @@
       "url": "https://trello.com/"
     }
   ],
+  "工具": [
+    {
+      "addedAt": "2025-09-06T09:17:33.013Z",
+      "description": "格式化并校验json",
+      "id": "mf81w4id6ccs9px56is",
+      "title": "JSON 校验",
+      "url": "https://jsonlint.com/"
+    },
+    {
+      "id": "mfi19lxusuyji3zcu6",
+      "title": "Material Symbols & Icons - Google Fonts",
+      "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C",
+      "description": "Material Symbols & Icons 图标",
+      "addedAt": "2025-09-13T08:57:44.274Z"
+    }
+  ],
   "组件库": [
     {
       "addedAt": "2025-08-11T08:16:54.153Z",
@@ -228,15 +244,6 @@
       "id": "me6ua4su2njc70v5rd8",
       "title": "VitePress",
       "url": "https://vp.xiaoying.org.cn/"
-    }
-  ],
-  "工具": [
-    {
-      "id": "mf81w4id6ccs9px56is",
-      "title": "JSON 校验",
-      "url": "https://jsonlint.com/",
-      "description": "格式化并校验json",
-      "addedAt": "2025-09-06T09:17:33.013Z"
     }
   ]
 }
