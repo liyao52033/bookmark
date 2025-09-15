@@ -223,11 +223,18 @@
       "url": "https://jsonlint.com/"
     },
     {
+      "addedAt": "2025-09-13T08:57:44.274Z",
+      "description": "Material Symbols & Icons 图标",
       "id": "mfi19lxusuyji3zcu6",
       "title": "Material Symbols & Icons - Google Fonts",
-      "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C",
-      "description": "Material Symbols & Icons 图标",
-      "addedAt": "2025-09-13T08:57:44.274Z"
+      "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C"
+    },
+    {
+      "id": "mfldor6rqx6l35uab1",
+      "title": "Freecat 🐾自由猫",
+      "url": "https://us.freecat.cloud/console",
+      "description": "全球网络加速服务商",
+      "addedAt": "2025-09-15T17:08:44.835Z"
     }
   ],
   "组件库": [
