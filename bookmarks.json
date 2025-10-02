@@ -178,6 +178,13 @@
       "id": "memnjxf41i56kxg1n48",
       "title": "Algolia",
       "url": "https://dashboard.algolia.com/apps/ATLKN4M9QW/explorer/browse/blog"
+    },
+    {
+      "id": "mg90cjmogpd40epmosr",
+      "title": "hugo手册",
+      "url": "https://jimmysong.io/book/hugo-handbook/site-structure/url-management/",
+      "description": "hugo常见使用说明",
+      "addedAt": "2025-10-02T06:01:48.384Z"
     }
   ],
   "工作": [
@@ -230,11 +237,11 @@
       "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C"
     },
     {
+      "addedAt": "2025-09-15T17:08:44.835Z",
+      "description": "全球网络加速服务商",
       "id": "mfldor6rqx6l35uab1",
       "title": "Freecat 🐾自由猫",
-      "url": "https://us.freecat.cloud/console",
-      "description": "全球网络加速服务商",
-      "addedAt": "2025-09-15T17:08:44.835Z"
+      "url": "https://us.freecat.cloud/console"
     }
   ],
   "组件库": [
