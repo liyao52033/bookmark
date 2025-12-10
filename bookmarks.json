@@ -1,4 +1,20 @@
 {
+   "个人站点": [
+    {
+      "addedAt": "2025-12-10T10:10:18.153Z",
+      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
+      "id": "me6u9zexfafvuepress",
+      "title": "vuepress站点",
+      "url": "https://xiaoying.org.cn/"
+    },
+    {
+      "addedAt": "2025-12-10T10:11:16.134Z",
+      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
+      "id": "me6ua4su2njc70v5rd8",
+      "title": "VitePress站点",
+      "url": "https://teek.xiaoying.org.cn/"
+    }
+  ],
   "AI": [
     {
       "addedAt": "2025-08-11T09:58:10.958Z",
@@ -251,13 +267,6 @@
       "id": "me6u9zexfafjjxphh8h",
       "title": "Element Plus",
       "url": "https://element-plus.org/zh-CN/component/overview.html"
-    },
-    {
-      "addedAt": "2025-08-11T08:17:01.134Z",
-      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
-      "id": "me6ua4su2njc70v5rd8",
-      "title": "VitePress",
-      "url": "https://vp.xiaoying.org.cn/"
     }
   ]
 }
