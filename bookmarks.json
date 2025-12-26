@@ -1,27 +1,4 @@
 {
-   "个人站点": [
-    {
-      "addedAt": "2025-12-10T10:10:18.153Z",
-      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
-      "id": "me6u9zexfafvuepress",
-      "title": "编程随笔",
-      "url": "https://xiaoying.org.cn/"
-    },
-    {
-      "addedAt": "2025-12-10T10:11:16.134Z",
-      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
-      "id": "me6ua4su2njc70v5rd8",
-      "title": "VitePress站点",
-      "url": "https://teek.xiaoying.org.cn/"
-    },
-    {
-      "id": "mizdvyo5k34au76521p",
-      "title": "组件库文档",
-      "url": "https://vp.xiaoying.org.cn/",
-      "description": "一个基于 hugo 构建的技术文档与组件指库",
-      "addedAt": "2025-12-10T02:22:14.597Z"
-    }
-  ],
   "AI": [
     {
       "addedAt": "2025-08-11T09:58:10.958Z",
@@ -150,6 +127,29 @@
       "url": "https://modelscope.cn/organization/qwen"
     }
   ],
+  "个人站点": [
+    {
+      "addedAt": "2025-12-10T10:10:18.153Z",
+      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
+      "id": "me6u9zexfafvuepress",
+      "title": "编程随笔",
+      "url": "https://xiaoying.org.cn/"
+    },
+    {
+      "addedAt": "2025-12-10T10:11:16.134Z",
+      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
+      "id": "me6ua4su2njc70v5rd8",
+      "title": "VitePress站点",
+      "url": "https://teek.xiaoying.org.cn/"
+    },
+    {
+      "addedAt": "2025-12-10T02:22:14.597Z",
+      "description": "一个基于 hugo 构建的技术文档与组件指库",
+      "id": "mizdvyo5k34au76521p",
+      "title": "组件库文档",
+      "url": "https://vp.xiaoying.org.cn/"
+    }
+  ],
   "云服务": [
     {
       "addedAt": "2025-08-11T08:14:54.445Z",
@@ -164,6 +164,13 @@
       "id": "mf4u6adhyt7adeq9zm",
       "title": "Supabase部署",
       "url": "https://www.hangge.com/blog/cache/detail_3408.html"
+    },
+    {
+      "id": "mjml1kovilmctjpxb4h",
+      "title": "EdgeOne CLI",
+      "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056",
+      "description": "EdgeOne函数文档",
+      "addedAt": "2025-12-26T08:01:15.775Z"
     }
   ],
   "博客": [
