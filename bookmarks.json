@@ -159,24 +159,24 @@
       "url": "https://console.cloud.tencent.com/edgeone/purge"
     },
     {
-      "addedAt": "2025-09-04T03:18:11.717Z",
-      "description": "Docker - 后端即服务平台Supabase的私有化部署教程",
-      "id": "mf4u6adhyt7adeq9zm",
-      "title": "Supabase部署",
-      "url": "https://www.hangge.com/blog/cache/detail_3408.html"
-    },
-    {
       "addedAt": "2025-12-26T08:01:15.775Z",
       "description": "EdgeOne函数文档",
       "id": "mjml1kovilmctjpxb4h",
       "title": "EdgeOne CLI",
       "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056"
     },
+     {
+      "addedAt": "2025-09-04T03:18:11.717Z",
+      "description": "supabase远程免费数据库",
+      "id": "mf4u6adhyt7adeq9zm",
+      "title": "Supabase部署",
+      "url": "upabase.com/dashboard"
+    },
     {
       "id": "mk82chza3r3rgjidsem",
       "title": "开箱即用的云计算平台",
       "url": "https://www.hi168.com/#/desktop",
-      "description": "",
+      "description": "hi168对象存储",
       "addedAt": "2026-01-10T08:48:48.646Z"
     }
   ],
