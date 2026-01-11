@@ -165,7 +165,7 @@
       "title": "EdgeOne CLI",
       "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056"
     },
-     {
+    {
       "addedAt": "2025-09-04T03:18:11.717Z",
       "description": "supabase远程免费数据库",
       "id": "mf4u6adhyt7adeq9zm",
@@ -173,11 +173,18 @@
       "url": "https://supabase.com/dashboard"
     },
     {
+      "addedAt": "2026-01-10T08:48:48.646Z",
+      "description": "hi168对象存储",
       "id": "mk82chza3r3rgjidsem",
       "title": "开箱即用的云计算平台",
-      "url": "https://www.hi168.com/#/desktop",
-      "description": "hi168对象存储",
-      "addedAt": "2026-01-10T08:48:48.646Z"
+      "url": "https://www.hi168.com/#/desktop"
+    },
+    {
+      "id": "mk9x91knbwv77am17zq",
+      "title": "Your projects · PyPI",
+      "url": "https://pypi.org/manage/projects/",
+      "description": "python包仓库",
+      "addedAt": "2026-01-11T16:01:41.687Z"
     }
   ],
   "博客": [
