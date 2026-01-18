@@ -166,13 +166,6 @@
       "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056"
     },
     {
-      "addedAt": "2025-09-04T03:18:11.717Z",
-      "description": "supabase远程免费数据库",
-      "id": "mf4u6adhyt7adeq9zm",
-      "title": "Supabase部署",
-      "url": "https://supabase.com/dashboard"
-    },
-    {
       "addedAt": "2026-01-10T08:48:48.646Z",
       "description": "hi168对象存储",
       "id": "mk82chza3r3rgjidsem",
@@ -185,6 +178,19 @@
       "id": "mk9x91knbwv77am17zq",
       "title": "Your projects · PyPI",
       "url": "https://pypi.org/manage/projects/"
+    },
+    {
+      "description": "代码托管平台，用于存储和协作开发项目",
+      "id": "1",
+      "title": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "addedAt": "2025-09-04T03:18:11.717Z",
+      "description": "supabase远程免费数据库",
+      "id": "mf4u6adhyt7adeq9zm",
+      "title": "Supabase部署",
+      "url": "https://supabase.com/dashboard"
     },
     {
       "id": "mkj5x2rfqtmz4ksm5b",
@@ -229,40 +235,6 @@
       "id": "mg90cjmogpd40epmosr",
       "title": "hugo手册",
       "url": "https://jimmysong.io/book/hugo-handbook/site-structure/url-management/"
-    }
-  ],
-  "工作": [
-    {
-      "description": "代码托管平台，用于存储和协作开发项目",
-      "id": "1",
-      "title": "GitHub",
-      "url": "https://github.com/"
-    },
-    {
-      "description": "程序员问答社区，解决编程问题的好地方",
-      "id": "2",
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com/"
-    },
-    {
-      "description": "Web技术文档，提供HTML、CSS和JavaScript等详细指南",
-      "id": "3",
-      "title": "MDN Web Docs",
-      "url": "https://developer.mozilla.org/"
-    },
-    {
-      "addedAt": "2025-03-15T11:59:45.242Z",
-      "description": "Where work happens",
-      "id": "m8a5mna2tlrsat00jd",
-      "title": "Slack",
-      "url": "https://slack.com/"
-    },
-    {
-      "addedAt": "2025-03-15T12:28:04.444Z",
-      "description": "随时随地捕获、整理和处理待办事项",
-      "id": "m8a6n2e4xa60zmyv7q",
-      "title": "Trello",
-      "url": "https://trello.com/"
     }
   ],
   "工具": [
