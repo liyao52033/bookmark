@@ -180,11 +180,18 @@
       "url": "https://www.hi168.com/#/desktop"
     },
     {
+      "addedAt": "2026-01-11T16:01:41.687Z",
+      "description": "python包仓库",
       "id": "mk9x91knbwv77am17zq",
       "title": "Your projects · PyPI",
-      "url": "https://pypi.org/manage/projects/",
-      "description": "python包仓库",
-      "addedAt": "2026-01-11T16:01:41.687Z"
+      "url": "https://pypi.org/manage/projects/"
+    },
+    {
+      "id": "mkj5x2rfqtmz4ksm5b",
+      "title": "Google Cloud 控制台",
+      "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project",
+      "description": "google第三方登录",
+      "addedAt": "2026-01-18T03:14:15.483Z"
     }
   ],
   "博客": [
