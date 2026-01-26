@@ -193,11 +193,18 @@
       "url": "https://supabase.com/dashboard"
     },
     {
+      "addedAt": "2026-01-18T03:14:15.483Z",
+      "description": "google第三方登录",
       "id": "mkj5x2rfqtmz4ksm5b",
       "title": "Google Cloud 控制台",
-      "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project",
-      "description": "google第三方登录",
-      "addedAt": "2026-01-18T03:14:15.483Z"
+      "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project"
+    },
+    {
+      "id": "mkutwthypy2p5i8gyw",
+      "title": "resend",
+      "url": "https://resend.com/emails",
+      "description": "邮件发送管理",
+      "addedAt": "2026-01-26T07:11:22.198Z"
     }
   ],
   "博客": [
