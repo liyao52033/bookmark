@@ -200,11 +200,18 @@
       "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project"
     },
     {
+      "addedAt": "2026-01-26T07:11:22.198Z",
+      "description": "邮件发送管理",
       "id": "mkutwthypy2p5i8gyw",
       "title": "resend",
-      "url": "https://resend.com/emails",
-      "description": "邮件发送管理",
-      "addedAt": "2026-01-26T07:11:22.198Z"
+      "url": "https://resend.com/emails"
+    },
+    {
+      "id": "mltegox0lsr8xay8kgn",
+      "title": "图像调整器 | 免费轻松在线调整图像大小",
+      "url": "https://imageresizer.com/zh",
+      "description": "",
+      "addedAt": "2026-02-19T11:50:51.684Z"
     }
   ],
   "博客": [
