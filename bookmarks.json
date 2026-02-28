@@ -125,6 +125,13 @@
       "id": "m9b4q9w0kyiky3plo1",
       "title": "魔搭社区",
       "url": "https://modelscope.cn/organization/qwen"
+    },
+    {
+      "id": "mm693cqza2scydcfaq",
+      "title": "OpenCode",
+      "url": "https://opencode.ai/docs/zh-cn/",
+      "description": "一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式",
+      "addedAt": "2026-02-28T11:41:31.595Z"
     }
   ],
   "个人站点": [
@@ -207,11 +214,11 @@
       "url": "https://resend.com/emails"
     },
     {
+      "addedAt": "2026-02-19T11:50:51.684Z",
+      "description": "",
       "id": "mltegox0lsr8xay8kgn",
       "title": "图像调整器 | 免费轻松在线调整图像大小",
-      "url": "https://imageresizer.com/zh",
-      "description": "",
-      "addedAt": "2026-02-19T11:50:51.684Z"
+      "url": "https://imageresizer.com/zh"
     }
   ],
   "博客": [
