@@ -127,11 +127,18 @@
       "url": "https://modelscope.cn/organization/qwen"
     },
     {
+      "addedAt": "2026-02-28T11:41:31.595Z",
+      "description": "一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式",
       "id": "mm693cqza2scydcfaq",
       "title": "OpenCode",
-      "url": "https://opencode.ai/docs/zh-cn/",
-      "description": "一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式",
-      "addedAt": "2026-02-28T11:41:31.595Z"
+      "url": "https://opencode.ai/docs/zh-cn/"
+    },
+    {
+      "id": "mm8xhnt0o26ftxxabjo",
+      "title": "Agent Skills 市场 - Claude、Codex 和 ChatGPT Skills | SkillsMP",
+      "url": "https://skillsmp.com/zh",
+      "description": "AI 语义搜索或关键字筛选，按分类浏览，按热度排序。所有技能采用开放的 SKILL.md 标准，一键安装",
+      "addedAt": "2026-03-02T08:40:02.244Z"
     }
   ],
   "个人站点": [
