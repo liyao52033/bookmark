@@ -134,11 +134,11 @@
       "url": "https://opencode.ai/docs/zh-cn/"
     },
     {
+      "addedAt": "2026-03-02T08:40:02.244Z",
+      "description": "AI 语义搜索或关键字筛选，按分类浏览，按热度排序。所有技能采用开放的 SKILL.md 标准，一键安装",
       "id": "mm8xhnt0o26ftxxabjo",
       "title": "Agent Skills 市场 - Claude、Codex 和 ChatGPT Skills | SkillsMP",
-      "url": "https://skillsmp.com/zh",
-      "description": "AI 语义搜索或关键字筛选，按分类浏览，按热度排序。所有技能采用开放的 SKILL.md 标准，一键安装",
-      "addedAt": "2026-03-02T08:40:02.244Z"
+      "url": "https://skillsmp.com/zh"
     }
   ],
   "个人站点": [
@@ -226,6 +226,13 @@
       "id": "mltegox0lsr8xay8kgn",
       "title": "图像调整器 | 免费轻松在线调整图像大小",
       "url": "https://imageresizer.com/zh"
+    },
+    {
+      "id": "mmvw97ei2hhuumg5wdk",
+      "title": "腾讯位置",
+      "url": "https://lbs.qq.com/dev/console/user/info",
+      "description": "腾讯位置服务，提供天气接口",
+      "addedAt": "2026-03-18T10:24:10.170Z"
     }
   ],
   "博客": [
