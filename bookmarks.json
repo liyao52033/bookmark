@@ -139,6 +139,13 @@
       "id": "mm8xhnt0o26ftxxabjo",
       "title": "Agent Skills 市场 - Claude、Codex 和 ChatGPT Skills | SkillsMP",
       "url": "https://skillsmp.com/zh"
+    },
+    {
+      "id": "mn3e6xra59m5tk3aswu",
+      "title": "Google AI Studio",
+      "url": "https://aistudio.google.com/apps",
+      "description": "google AI网站",
+      "addedAt": "2026-03-23T16:20:40.678Z"
     }
   ],
   "个人站点": [
@@ -228,11 +235,11 @@
       "url": "https://imageresizer.com/zh"
     },
     {
+      "addedAt": "2026-03-18T10:24:10.170Z",
+      "description": "腾讯位置服务，提供天气接口",
       "id": "mmvw97ei2hhuumg5wdk",
       "title": "腾讯位置",
-      "url": "https://lbs.qq.com/dev/console/user/info",
-      "description": "腾讯位置服务，提供天气接口",
-      "addedAt": "2026-03-18T10:24:10.170Z"
+      "url": "https://lbs.qq.com/dev/console/user/info"
     }
   ],
   "博客": [
