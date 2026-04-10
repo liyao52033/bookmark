@@ -141,11 +141,11 @@
       "url": "https://skillsmp.com/zh"
     },
     {
+      "addedAt": "2026-03-23T16:20:40.678Z",
+      "description": "google AI网站",
       "id": "mn3e6xra59m5tk3aswu",
       "title": "Google AI Studio",
-      "url": "https://aistudio.google.com/apps",
-      "description": "google AI网站",
-      "addedAt": "2026-03-23T16:20:40.678Z"
+      "url": "https://aistudio.google.com/apps"
     }
   ],
   "个人站点": [
@@ -240,6 +240,13 @@
       "id": "mmvw97ei2hhuumg5wdk",
       "title": "腾讯位置",
       "url": "https://lbs.qq.com/dev/console/user/info"
+    },
+    {
+      "id": "mnso4olpijywygtcjt",
+      "title": "Railway",
+      "url": "https://railway.com/project/4992903c-9a98-4a39-8d82-9efedb5a4752/service/921d24f6-2d28-4c48-ac67-0adc5473a653?environmentId=b575e574-7b31-46d7-ae92-4640f9c86a6d",
+      "description": "在线docker部署",
+      "addedAt": "2026-04-10T08:53:06.061Z"
     }
   ],
   "博客": [
