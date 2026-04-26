@@ -242,11 +242,18 @@
       "url": "https://lbs.qq.com/dev/console/user/info"
     },
     {
+      "addedAt": "2026-04-10T08:53:06.061Z",
+      "description": "在线docker部署",
       "id": "mnso4olpijywygtcjt",
       "title": "Railway",
-      "url": "https://railway.com/project/4992903c-9a98-4a39-8d82-9efedb5a4752/service/921d24f6-2d28-4c48-ac67-0adc5473a653?environmentId=b575e574-7b31-46d7-ae92-4640f9c86a6d",
-      "description": "在线docker部署",
-      "addedAt": "2026-04-10T08:53:06.061Z"
+      "url": "https://railway.com/project/4992903c-9a98-4a39-8d82-9efedb5a4752/service/921d24f6-2d28-4c48-ac67-0adc5473a653?environmentId=b575e574-7b31-46d7-ae92-4640f9c86a6d"
+    },
+    {
+      "id": "mofk7u6mq8zjjyt6o5",
+      "title": "ds2api - Overview – Vercel",
+      "url": "https://vercel.com/liyao52033-7426s-projects/ds2api",
+      "description": "vercel部署的ds2api",
+      "addedAt": "2026-04-26T09:22:16.846Z"
     }
   ],
   "博客": [
