@@ -256,11 +256,18 @@
       "url": "https://vercel.com/liyao52033-7426s-projects/ds2api"
     },
     {
+      "addedAt": "2026-04-26T10:38:25.532Z",
+      "description": "clawcloud对象存储",
       "id": "mofmxrekb2ik60sz6zn",
       "title": "ClawCloud Run",
+      "url": "https://us-east-1.run.claw.cloud/"
+    },
+    {
+      "id": "mofn88xn5tr4gwi02wn",
+      "title": "ClawCloud Run",
       "url": "https://us-east-1.run.claw.cloud/",
-      "description": "clawcloud对象存储",
-      "addedAt": "2026-04-26T10:38:25.532Z"
+      "description": "ClawCloud 对象存储",
+      "addedAt": "2026-04-26T10:46:34.811Z"
     }
   ],
   "博客": [
