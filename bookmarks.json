@@ -270,11 +270,18 @@
       "url": "https://us-east-1.run.claw.cloud/"
     },
     {
+      "addedAt": "2026-05-04T09:14:33.688Z",
+      "description": "duckduckgo",
       "id": "moqzgq544lmutn5luw",
       "title": "DuckDuckGo Email | Email Protection from DuckDuckGo",
-      "url": "https://duckduckgo.com/email/settings/autofill",
-      "description": "duckduckgo",
-      "addedAt": "2026-05-04T09:14:33.688Z"
+      "url": "https://duckduckgo.com/email/settings/autofill"
+    },
+    {
+      "id": "mozdi2r0xuxx6jjpf8l",
+      "title": "MoeMail - 萌萌哒临时邮箱服务",
+      "url": "https://mail.blny.de/moe",
+      "description": "临时邮箱服务",
+      "addedAt": "2026-05-10T06:09:40.716Z"
     }
   ],
   "博客": [
