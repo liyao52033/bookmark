@@ -277,11 +277,18 @@
       "url": "https://duckduckgo.com/email/settings/autofill"
     },
     {
+      "addedAt": "2026-05-10T06:09:40.716Z",
+      "description": "临时邮箱服务",
       "id": "mozdi2r0xuxx6jjpf8l",
       "title": "MoeMail - 萌萌哒临时邮箱服务",
-      "url": "https://mail.blny.de/moe",
-      "description": "临时邮箱服务",
-      "addedAt": "2026-05-10T06:09:40.716Z"
+      "url": "https://mail.blny.de/moe"
+    },
+    {
+      "id": "mp55te3s0g0j9z1lmh8",
+      "title": "CLIProxyAPIPlus ・ Web Service ・ Render Dashboard",
+      "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14",
+      "description": "render云部署服务",
+      "addedAt": "2026-05-14T07:21:08.776Z"
     }
   ],
   "博客": [
