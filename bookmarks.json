@@ -348,11 +348,18 @@
       "url": "https://pay.ldxp.cn/shop/N8TF6R3M"
     },
     {
+      "addedAt": "2026-05-19T03:22:17.148Z",
+      "description": "codex free",
       "id": "mpc2hh30y1nqk9ro1xj",
       "title": "商家1632的小店",
-      "url": "https://pay.ldxp.cn/shop/ZNQRPI1Z",
-      "description": "codex free",
-      "addedAt": "2026-05-19T03:22:17.148Z"
+      "url": "https://pay.ldxp.cn/shop/ZNQRPI1Z"
+    },
+    {
+      "id": "mpc2ivg3b7n6tzskv0n",
+      "title": "Codex的小店",
+      "url": "https://pay.ldxp.cn/shop/AUYAI",
+      "description": "plus cdk",
+      "addedAt": "2026-05-19T03:23:22.419Z"
     }
   ]
 }
