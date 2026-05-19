@@ -383,11 +383,18 @@
       "url": "https://pay.ldxp.cn/shop/Lucoo"
     },
     {
+      "addedAt": "2026-05-19T03:29:21.834Z",
+      "description": "gpt plus",
       "id": "mpc2qkru3iczmrbwoa9",
       "title": "SHEN的小店",
-      "url": "https://pay.ldxp.cn/shop/DF6CKF46",
+      "url": "https://pay.ldxp.cn/shop/DF6CKF46"
+    },
+    {
+      "id": "mpc2rthoel56fkqx7j",
+      "title": "AICA的小店",
+      "url": "https://pay.ldxp.cn/shop/aica",
       "description": "gpt plus",
-      "addedAt": "2026-05-19T03:29:21.834Z"
+      "addedAt": "2026-05-19T03:30:19.788Z"
     }
   ]
 }
