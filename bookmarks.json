@@ -362,11 +362,18 @@
       "url": "https://pay.ldxp.cn/shop/AUYAI"
     },
     {
+      "addedAt": "2026-05-19T03:25:13.396Z",
+      "description": "数字卡密",
       "id": "mpc2l92snjfsm2vqhsa",
       "title": "LToken AI 小铺的小店",
-      "url": "https://pay.ldxp.cn/shop/12P8XO9Z",
-      "description": "数字卡密",
-      "addedAt": "2026-05-19T03:25:13.396Z"
+      "url": "https://pay.ldxp.cn/shop/12P8XO9Z"
+    },
+    {
+      "id": "mpc2mx4l1esjxca9g1w",
+      "title": "购物 - T佬的gmail批发渠道",
+      "url": "https://ai666.dnxb.cc/",
+      "description": "gmail邮箱",
+      "addedAt": "2026-05-19T03:26:31.221Z"
     }
   ]
 }
