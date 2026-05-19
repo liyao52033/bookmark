@@ -376,11 +376,18 @@
       "url": "https://ai666.dnxb.cc/"
     },
     {
+      "addedAt": "2026-05-19T03:28:47.788Z",
+      "description": "数字卡密",
       "id": "mpc2pui4vj1ery7b2h",
       "title": "Lucoo的小店",
-      "url": "https://pay.ldxp.cn/shop/Lucoo",
-      "description": "数字卡密",
-      "addedAt": "2026-05-19T03:28:47.788Z"
+      "url": "https://pay.ldxp.cn/shop/Lucoo"
+    },
+    {
+      "id": "mpc2qkru3iczmrbwoa9",
+      "title": "SHEN的小店",
+      "url": "https://pay.ldxp.cn/shop/DF6CKF46",
+      "description": "gpt plus",
+      "addedAt": "2026-05-19T03:29:21.834Z"
     }
   ]
 }
