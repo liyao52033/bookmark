@@ -355,11 +355,18 @@
       "url": "https://pay.ldxp.cn/shop/ZNQRPI1Z"
     },
     {
+      "addedAt": "2026-05-19T03:23:22.419Z",
+      "description": "plus cdk",
       "id": "mpc2ivg3b7n6tzskv0n",
       "title": "Codex的小店",
-      "url": "https://pay.ldxp.cn/shop/AUYAI",
-      "description": "plus cdk",
-      "addedAt": "2026-05-19T03:23:22.419Z"
+      "url": "https://pay.ldxp.cn/shop/AUYAI"
+    },
+    {
+      "id": "mpc2l92snjfsm2vqhsa",
+      "title": "LToken AI 小铺的小店",
+      "url": "https://pay.ldxp.cn/shop/12P8XO9Z",
+      "description": "数字卡密",
+      "addedAt": "2026-05-19T03:25:13.396Z"
     }
   ]
 }
