@@ -263,11 +263,11 @@
       "url": "https://mail.blny.de/moe"
     },
     {
+      "addedAt": "2026-05-14T07:21:08.776Z",
+      "description": "render云部署服务",
       "id": "mp55te3s0g0j9z1lmh8",
       "title": "Render Dashboard",
-      "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14",
-      "description": "render云部署服务",
-      "addedAt": "2026-05-14T07:21:08.776Z"
+      "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14"
     }
   ],
   "博客": [
@@ -337,6 +337,15 @@
       "id": "me6u9zexfafjjxphh8h",
       "title": "Element Plus",
       "url": "https://element-plus.org/zh-CN/component/overview.html"
+    }
+  ],
+  "链动小铺": [
+    {
+      "id": "mpc2cqul0y68xfnbowm",
+      "title": "CHAT GPT | TG | APPLE的小店",
+      "url": "https://pay.ldxp.cn/shop/N8TF6R3M",
+      "description": "数字卡密",
+      "addedAt": "2026-05-19T03:18:36.525Z"
     }
   ]
 }
