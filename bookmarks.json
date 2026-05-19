@@ -341,11 +341,18 @@
   ],
   "链动小铺": [
     {
+      "addedAt": "2026-05-19T03:18:36.525Z",
+      "description": "数字卡密",
       "id": "mpc2cqul0y68xfnbowm",
       "title": "CHAT GPT | TG | APPLE的小店",
-      "url": "https://pay.ldxp.cn/shop/N8TF6R3M",
-      "description": "数字卡密",
-      "addedAt": "2026-05-19T03:18:36.525Z"
+      "url": "https://pay.ldxp.cn/shop/N8TF6R3M"
+    },
+    {
+      "id": "mpc2hh30y1nqk9ro1xj",
+      "title": "商家1632的小店",
+      "url": "https://pay.ldxp.cn/shop/ZNQRPI1Z",
+      "description": "codex free",
+      "addedAt": "2026-05-19T03:22:17.148Z"
     }
   ]
 }
