@@ -404,11 +404,18 @@
       "url": "https://pay.ldxp.cn/shop/aica"
     },
     {
+      "addedAt": "2026-05-19T12:37:29.818Z",
+      "description": "",
       "id": "mpcmbhay4dhehjdbi8r",
       "title": "链动小铺市场",
-      "url": "https://pet.tradingploy.com/",
-      "description": "",
-      "addedAt": "2026-05-19T12:37:29.818Z"
+      "url": "https://pet.tradingploy.com/"
+    },
+    {
+      "id": "mpcqme16pxrhd8m76dk",
+      "title": "PLUS直营店的小店",
+      "url": "https://pay.ldxp.cn/shop/FNAOIGBK",
+      "description": "plus",
+      "addedAt": "2026-05-19T14:37:57.258Z"
     }
   ]
 }
