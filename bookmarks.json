@@ -369,11 +369,18 @@
       "url": "https://pay.ldxp.cn/shop/12P8XO9Z"
     },
     {
+      "addedAt": "2026-05-19T03:26:31.221Z",
+      "description": "gmail邮箱",
       "id": "mpc2mx4l1esjxca9g1w",
       "title": "购物 - T佬的gmail批发渠道",
-      "url": "https://ai666.dnxb.cc/",
-      "description": "gmail邮箱",
-      "addedAt": "2026-05-19T03:26:31.221Z"
+      "url": "https://ai666.dnxb.cc/"
+    },
+    {
+      "id": "mpc2pui4vj1ery7b2h",
+      "title": "Lucoo的小店",
+      "url": "https://pay.ldxp.cn/shop/Lucoo",
+      "description": "数字卡密",
+      "addedAt": "2026-05-19T03:28:47.788Z"
     }
   ]
 }
