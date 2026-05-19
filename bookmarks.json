@@ -328,6 +328,13 @@
       "id": "mfldor6rqx6l35uab1",
       "title": "Freecat 🐾自由猫",
       "url": "https://us.freecat.cloud/console"
+    },
+    {
+      "id": "mpc2tpx246nc2w0ouyh",
+      "title": "DuckDuckGo Email | Email Protection Requires DuckDuckGo",
+      "url": "https://duckduckgo.com/email/",
+      "description": "邮箱别名",
+      "addedAt": "2026-05-19T03:31:48.470Z"
     }
   ],
   "组件库": [
@@ -390,11 +397,11 @@
       "url": "https://pay.ldxp.cn/shop/DF6CKF46"
     },
     {
+      "addedAt": "2026-05-19T03:30:19.788Z",
+      "description": "gpt plus",
       "id": "mpc2rthoel56fkqx7j",
       "title": "AICA的小店",
-      "url": "https://pay.ldxp.cn/shop/aica",
-      "description": "gpt plus",
-      "addedAt": "2026-05-19T03:30:19.788Z"
+      "url": "https://pay.ldxp.cn/shop/aica"
     }
   ]
 }
