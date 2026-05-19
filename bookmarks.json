@@ -330,11 +330,11 @@
       "url": "https://us.freecat.cloud/console"
     },
     {
+      "addedAt": "2026-05-19T03:31:48.470Z",
+      "description": "邮箱别名",
       "id": "mpc2tpx246nc2w0ouyh",
       "title": "DuckDuckGo Email | Email Protection Requires DuckDuckGo",
-      "url": "https://duckduckgo.com/email/",
-      "description": "邮箱别名",
-      "addedAt": "2026-05-19T03:31:48.470Z"
+      "url": "https://duckduckgo.com/email/"
     }
   ],
   "组件库": [
@@ -402,6 +402,13 @@
       "id": "mpc2rthoel56fkqx7j",
       "title": "AICA的小店",
       "url": "https://pay.ldxp.cn/shop/aica"
+    },
+    {
+      "id": "mpcmbhay4dhehjdbi8r",
+      "title": "链动小铺市场",
+      "url": "https://pet.tradingploy.com/",
+      "description": "",
+      "addedAt": "2026-05-19T12:37:29.818Z"
     }
   ]
 }
