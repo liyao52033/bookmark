@@ -347,14 +347,14 @@
     }
   ],
   "链动小铺": [
-     {
+    {
       "addedAt": "2026-05-19T12:37:29.818Z",
       "description": "",
       "id": "mpcmbhay4dhehjdbi8r",
       "title": "链动小铺市场",
       "url": "https://pet.tradingploy.com/"
     },
-     {
+    {
       "addedAt": "2026-05-19T12:37:29.818Z",
       "description": "gpt plus凭证提取",
       "id": "mpcmbhay4dhehjdbi67",
@@ -418,11 +418,18 @@
       "url": "https://pay.ldxp.cn/shop/aica"
     },
     {
+      "addedAt": "2026-05-19T14:37:57.258Z",
+      "description": "plus",
       "id": "mpcqme16pxrhd8m76dk",
       "title": "PLUS直营店的小店",
-      "url": "https://pay.ldxp.cn/shop/FNAOIGBK",
-      "description": "plus",
-      "addedAt": "2026-05-19T14:37:57.258Z"
+      "url": "https://pay.ldxp.cn/shop/FNAOIGBK"
+    },
+    {
+      "id": "mpf6l1jecgqgodd1hwu",
+      "title": "九邮 - 优质微软邮箱批发",
+      "url": "https://www.nineemail.com/",
+      "description": "微软邮箱购买",
+      "addedAt": "2026-05-21T07:40:20.618Z"
     }
   ]
 }
