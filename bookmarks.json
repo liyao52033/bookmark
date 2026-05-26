@@ -360,11 +360,18 @@
       "url": "https://hero-sms.com/cn"
     },
     {
+      "addedAt": "2026-05-26T13:35:10.191Z",
+      "description": "接码平台",
       "id": "mpmogm0fhryqo4uju2i",
       "title": "SMSPool",
-      "url": "https://www.smspool.net/purchase/quick_sms",
+      "url": "https://www.smspool.net/purchase/quick_sms"
+    },
+    {
+      "id": "mpmp4ss7m2u8hv6co2c",
+      "title": "SMSPool",
+      "url": "https://www.smspool.net/purchase/sms",
       "description": "接码平台",
-      "addedAt": "2026-05-26T13:35:10.191Z"
+      "addedAt": "2026-05-26T13:53:58.711Z"
     }
   ],
   "组件库": [
