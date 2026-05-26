@@ -425,11 +425,20 @@
       "url": "https://pay.ldxp.cn/shop/FNAOIGBK"
     },
     {
+      "addedAt": "2026-05-21T07:40:20.618Z",
+      "description": "微软邮箱购买",
       "id": "mpf6l1jecgqgodd1hwu",
       "title": "九邮 - 优质微软邮箱批发",
-      "url": "https://www.nineemail.com/",
-      "description": "微软邮箱购买",
-      "addedAt": "2026-05-21T07:40:20.618Z"
+      "url": "https://www.nineemail.com/"
+    }
+  ],
+  "接码平台": [
+    {
+      "id": "mpmnb8cmo2o0y08a4u",
+      "title": "NexSMS Active",
+      "url": "https://user.nexsms.net/#/free-sms",
+      "description": "接码平台",
+      "addedAt": "2026-05-26T13:02:59.590Z"
     }
   ]
 }
