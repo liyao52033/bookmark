@@ -346,11 +346,18 @@
       "url": "https://user.nexsms.net/#/free-sms"
     },
     {
+      "addedAt": "2026-05-26T13:26:56.865Z",
+      "description": "接码平台",
       "id": "mpmo61cxi203vzgvre8",
       "title": "5sim",
-      "url": "https://5sim.net/zh/settings/prices",
-      "description": "接码平台",
-      "addedAt": "2026-05-26T13:26:56.865Z"
+      "url": "https://5sim.net/zh/settings/prices"
+    },
+    {
+      "id": "mpmo7lzyp1o4x89bu8g",
+      "title": "herosms",
+      "url": "https://hero-sms.com/cn",
+      "description": "在线接收带有验证码的短信",
+      "addedAt": "2026-05-26T13:28:10.270Z"
     }
   ],
   "组件库": [
