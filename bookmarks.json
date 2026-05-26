@@ -367,11 +367,18 @@
       "url": "https://www.smspool.net/purchase/quick_sms"
     },
     {
+      "addedAt": "2026-05-26T13:53:58.711Z",
+      "description": "接码平台",
       "id": "mpmp4ss7m2u8hv6co2c",
       "title": "SMSPool",
-      "url": "https://www.smspool.net/purchase/sms",
-      "description": "接码平台",
-      "addedAt": "2026-05-26T13:53:58.711Z"
+      "url": "https://www.smspool.net/purchase/sms"
+    },
+    {
+      "id": "mpmprvvu5po1lk0427",
+      "title": "smsbower",
+      "url": "https://smsbower.app/cn",
+      "description": "购买虚拟话号码进行注册--用于发短信的临时号码",
+      "addedAt": "2026-05-26T14:11:55.818Z"
     }
   ],
   "组件库": [
