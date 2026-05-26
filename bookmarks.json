@@ -353,11 +353,18 @@
       "url": "https://5sim.net/zh/settings/prices"
     },
     {
+      "addedAt": "2026-05-26T13:28:10.270Z",
+      "description": "在线接收带有验证码的短信",
       "id": "mpmo7lzyp1o4x89bu8g",
       "title": "herosms",
-      "url": "https://hero-sms.com/cn",
-      "description": "在线接收带有验证码的短信",
-      "addedAt": "2026-05-26T13:28:10.270Z"
+      "url": "https://hero-sms.com/cn"
+    },
+    {
+      "id": "mpmogm0fhryqo4uju2i",
+      "title": "SMSPool",
+      "url": "https://www.smspool.net/purchase/quick_sms",
+      "description": "接码平台",
+      "addedAt": "2026-05-26T13:35:10.191Z"
     }
   ],
   "组件库": [
