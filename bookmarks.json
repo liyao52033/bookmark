@@ -337,6 +337,22 @@
       "url": "https://duckduckgo.com/email/"
     }
   ],
+  "接码平台": [
+    {
+      "addedAt": "2026-05-26T13:02:59.590Z",
+      "description": "接码平台",
+      "id": "mpmnb8cmo2o0y08a4u",
+      "title": "NexSMS Active",
+      "url": "https://user.nexsms.net/#/free-sms"
+    },
+    {
+      "id": "mpmo61cxi203vzgvre8",
+      "title": "5sim",
+      "url": "https://5sim.net/zh/settings/prices",
+      "description": "接码平台",
+      "addedAt": "2026-05-26T13:26:56.865Z"
+    }
+  ],
   "组件库": [
     {
       "addedAt": "2025-08-11T08:16:54.153Z",
@@ -430,15 +446,6 @@
       "id": "mpf6l1jecgqgodd1hwu",
       "title": "九邮 - 优质微软邮箱批发",
       "url": "https://www.nineemail.com/"
-    }
-  ],
-  "接码平台": [
-    {
-      "id": "mpmnb8cmo2o0y08a4u",
-      "title": "NexSMS Active",
-      "url": "https://user.nexsms.net/#/free-sms",
-      "description": "接码平台",
-      "addedAt": "2026-05-26T13:02:59.590Z"
     }
   ]
 }
