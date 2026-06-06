@@ -476,11 +476,18 @@
       "url": "https://www.nineemail.com/"
     },
     {
+      "addedAt": "2026-06-06T06:37:46.912Z",
+      "description": "gpt plus",
       "id": "mq1ze7tsvgcbrntuya9",
       "title": "奥特曼直营店的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/J0Q89LSE",
-      "description": "gpt plus",
-      "addedAt": "2026-06-06T06:37:46.912Z"
+      "url": "https://pay.ldxp.cn/shop/J0Q89LSE"
+    },
+    {
+      "id": "mq1zvufccdbiz7geifm",
+      "title": "kilig的小店的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/9HL9C97C",
+      "description": "gpt-plus",
+      "addedAt": "2026-06-06T06:51:29.352Z"
     }
   ]
 }
