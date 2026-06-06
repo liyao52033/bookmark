@@ -483,11 +483,25 @@
       "url": "https://pay.ldxp.cn/shop/J0Q89LSE"
     },
     {
+      "addedAt": "2026-06-06T06:51:29.352Z",
+      "description": "gpt-plus",
       "id": "mq1zvufccdbiz7geifm",
       "title": "kilig的小店的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/9HL9C97C",
-      "description": "gpt-plus",
-      "addedAt": "2026-06-06T06:51:29.352Z"
+      "url": "https://pay.ldxp.cn/shop/9HL9C97C"
+    },
+    {
+      "addedAt": "2026-06-06T07:06:08.891Z",
+      "description": "中转站",
+      "id": "mq20ep2zw6qxa22rmos",
+      "title": "中国词元联盟总代理",
+      "url": "https://llm.mathmodel.tech/dashboard/models"
+    },
+    {
+      "id": "mq20eryrv5jnvty3ko",
+      "title": "中国词元联盟总代理",
+      "url": "https://llm.mathmodel.tech/dashboard/models",
+      "description": "中转站",
+      "addedAt": "2026-06-06T07:06:12.627Z"
     }
   ]
 }
