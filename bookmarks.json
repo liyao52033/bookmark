@@ -374,11 +374,11 @@
       "url": "https://www.smspool.net/purchase/sms"
     },
     {
+      "addedAt": "2026-05-26T14:11:55.818Z",
+      "description": "购买虚拟话号码进行注册--用于发短信的临时号码",
       "id": "mpmprvvu5po1lk0427",
       "title": "smsbower",
-      "url": "https://smsbower.app/cn",
-      "description": "购买虚拟话号码进行注册--用于发短信的临时号码",
-      "addedAt": "2026-05-26T14:11:55.818Z"
+      "url": "https://smsbower.app/cn"
     }
   ],
   "组件库": [
@@ -474,6 +474,13 @@
       "id": "mpf6l1jecgqgodd1hwu",
       "title": "九邮 - 优质微软邮箱批发",
       "url": "https://www.nineemail.com/"
+    },
+    {
+      "id": "mq1ze7tsvgcbrntuya9",
+      "title": "奥特曼直营店的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/J0Q89LSE",
+      "description": "gpt plus",
+      "addedAt": "2026-06-06T06:37:46.912Z"
     }
   ]
 }
