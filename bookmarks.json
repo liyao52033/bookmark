@@ -277,11 +277,18 @@
       "url": "https://domain.duckmail.sbs/dashboard/api-keys"
     },
     {
+      "addedAt": "2026-06-18T07:21:39.371Z",
+      "description": "临时性 - 匿名电子邮件",
       "id": "mqj68v1nlj5bhkn27tg",
       "title": "Temp Mail",
-      "url": "https://temp-mail.org/zh/view/6a339c5270aeb8da48bd20c7",
-      "description": "临时性 - 匿名电子邮件",
-      "addedAt": "2026-06-18T07:21:39.371Z"
+      "url": "https://temp-mail.org/zh/view/6a339c5270aeb8da48bd20c7"
+    },
+    {
+      "id": "mqj6oruix68jrhzstbg",
+      "title": "YYDS Mail - 免费临时邮箱、一次性匿名邮箱、邮箱、API平台",
+      "url": "https://vip.215.im/dashboard",
+      "description": "",
+      "addedAt": "2026-06-18T07:34:01.722Z"
     }
   ],
   "博客": [
