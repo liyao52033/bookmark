@@ -268,6 +268,13 @@
       "id": "mp55te3s0g0j9z1lmh8",
       "title": "Render Dashboard",
       "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14"
+    },
+    {
+      "id": "mqj5102du4zpyqavz9j",
+      "title": "DuckMail - 域名管理",
+      "url": "https://domain.duckmail.sbs/dashboard/api-keys",
+      "description": "临时邮箱",
+      "addedAt": "2026-06-18T06:47:33.013Z"
     }
   ],
   "博客": [
@@ -469,11 +476,11 @@
       "url": "https://pay.ldxp.cn/shop/9HL9C97C"
     },
     {
+      "addedAt": "2026-06-12T14:02:48.165Z",
+      "description": "gpt plus",
       "id": "mqazxmn91ok9lxu2z6h",
       "title": "CaiCai的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/62AY1ZET",
-      "description": "gpt plus",
-      "addedAt": "2026-06-12T14:02:48.165Z"
+      "url": "https://pay.ldxp.cn/shop/62AY1ZET"
     }
   ]
 }
