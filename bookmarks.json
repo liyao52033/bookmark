@@ -270,11 +270,18 @@
       "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14"
     },
     {
+      "addedAt": "2026-06-18T06:47:33.013Z",
+      "description": "临时邮箱",
       "id": "mqj5102du4zpyqavz9j",
       "title": "DuckMail - 域名管理",
-      "url": "https://domain.duckmail.sbs/dashboard/api-keys",
-      "description": "临时邮箱",
-      "addedAt": "2026-06-18T06:47:33.013Z"
+      "url": "https://domain.duckmail.sbs/dashboard/api-keys"
+    },
+    {
+      "id": "mqj68v1nlj5bhkn27tg",
+      "title": "Temp Mail",
+      "url": "https://temp-mail.org/zh/view/6a339c5270aeb8da48bd20c7",
+      "description": "临时性 - 匿名电子邮件",
+      "addedAt": "2026-06-18T07:21:39.371Z"
     }
   ],
   "博客": [
