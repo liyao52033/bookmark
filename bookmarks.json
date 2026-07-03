@@ -284,11 +284,11 @@
       "url": "https://temp-mail.org/zh/view/6a339c5270aeb8da48bd20c7"
     },
     {
+      "addedAt": "2026-06-18T07:34:01.722Z",
+      "description": "",
       "id": "mqj6oruix68jrhzstbg",
       "title": "YYDS Mail - 免费临时邮箱、一次性匿名邮箱、邮箱、API平台",
-      "url": "https://vip.215.im/dashboard",
-      "description": "",
-      "addedAt": "2026-06-18T07:34:01.722Z"
+      "url": "https://vip.215.im/dashboard"
     }
   ],
   "博客": [
@@ -495,6 +495,13 @@
       "id": "mqazxmn91ok9lxu2z6h",
       "title": "CaiCai的小店 - 链动小铺",
       "url": "https://pay.ldxp.cn/shop/62AY1ZET"
+    },
+    {
+      "id": "mr4pmquseu68tm3nslc",
+      "title": "AI老玩家小店铺的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/QJNPHN5B",
+      "description": "gpt team k12",
+      "addedAt": "2026-07-03T09:07:29.524Z"
     }
   ]
 }
