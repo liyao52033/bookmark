@@ -490,11 +490,18 @@
       "url": "https://pay.ldxp.cn/shop/62AY1ZET"
     },
     {
+      "addedAt": "2026-07-03T09:07:29.524Z",
+      "description": "gpt team k12",
       "id": "mr4pmquseu68tm3nslc",
       "title": "AI老玩家小店铺的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/QJNPHN5B",
-      "description": "gpt team k12",
-      "addedAt": "2026-07-03T09:07:29.524Z"
+      "url": "https://pay.ldxp.cn/shop/QJNPHN5B"
+    },
+    {
+      "id": "mr61zbzpt14vga4nmv",
+      "title": "帅API",
+      "url": "https://api.shuaiapi.com/pricing",
+      "description": "中转站",
+      "addedAt": "2026-07-04T07:40:58.357Z"
     }
   ]
 }
