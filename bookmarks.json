@@ -419,6 +419,13 @@
       "title": "九邮 - 优质微软邮箱批发",
       "url": "https://www.nineemail.com/"
     },
+     {
+      "id": "mr621c8xh9wkuwu9vsp",
+      "title": "ChatGPT JSON / Session 本地转 CPA / sub2api",
+      "url": "https://gpt.learnlicen.dpdns.org/",
+      "description": "",
+      "addedAt": "2026-07-04T07:42:32.001Z"
+    },
     {
       "addedAt": "2026-06-06T07:06:08.891Z",
       "description": "中转站",
@@ -439,13 +446,6 @@
       "id": "mpc2l92snjfsm2vqhsa",
       "title": "LToken AI 小铺的小店",
       "url": "https://pay.ldxp.cn/shop/12P8XO9Z"
-    },
-    {
-      "addedAt": "2026-05-19T03:26:31.221Z",
-      "description": "gmail邮箱",
-      "id": "mpc2mx4l1esjxca9g1w",
-      "title": "购物 - T佬的gmail批发渠道",
-      "url": "https://ai666.dnxb.cc/"
     },
     {
       "addedAt": "2026-05-19T03:28:47.788Z",
@@ -495,20 +495,6 @@
       "id": "mr4pmquseu68tm3nslc",
       "title": "AI老玩家小店铺的小店 - 链动小铺",
       "url": "https://pay.ldxp.cn/shop/QJNPHN5B"
-    },
-    {
-      "addedAt": "2026-07-04T07:40:58.357Z",
-      "description": "中转站",
-      "id": "mr61zbzpt14vga4nmv",
-      "title": "帅API",
-      "url": "https://api.shuaiapi.com/pricing"
-    },
-    {
-      "id": "mr621c8xh9wkuwu9vsp",
-      "title": "ChatGPT JSON / Session 本地转 CPA / sub2api",
-      "url": "https://gpt.learnlicen.dpdns.org/",
-      "description": "",
-      "addedAt": "2026-07-04T07:42:32.001Z"
     }
   ]
 }
