@@ -497,11 +497,18 @@
       "url": "https://pay.ldxp.cn/shop/QJNPHN5B"
     },
     {
+      "addedAt": "2026-07-04T07:40:58.357Z",
+      "description": "中转站",
       "id": "mr61zbzpt14vga4nmv",
       "title": "帅API",
-      "url": "https://api.shuaiapi.com/pricing",
-      "description": "中转站",
-      "addedAt": "2026-07-04T07:40:58.357Z"
+      "url": "https://api.shuaiapi.com/pricing"
+    },
+    {
+      "id": "mr621c8xh9wkuwu9vsp",
+      "title": "ChatGPT JSON / Session 本地转 CPA / sub2api",
+      "url": "https://gpt.learnlicen.dpdns.org/",
+      "description": "",
+      "addedAt": "2026-07-04T07:42:32.001Z"
     }
   ]
 }
