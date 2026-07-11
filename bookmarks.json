@@ -358,11 +358,11 @@
       "url": "https://duckduckgo.com/email/"
     },
     {
+      "addedAt": "2026-07-04T10:31:33.852Z",
+      "description": "",
       "id": "mr682pr05t55t0rxlil",
       "title": "Gmail 无限别名 | Gmail Infinite Alias Generator | Gmail 分身 | 谷歌邮箱别名",
-      "url": "https://gmail.31tu.com/",
-      "description": "",
-      "addedAt": "2026-07-04T10:31:33.852Z"
+      "url": "https://gmail.31tu.com/"
     }
   ],
   "接码平台": [
@@ -502,6 +502,13 @@
       "id": "mr4pmquseu68tm3nslc",
       "title": "AI老玩家小店铺的小店 - 链动小铺",
       "url": "https://pay.ldxp.cn/shop/QJNPHN5B"
+    },
+    {
+      "id": "mrg1aiqqif242e0e06m",
+      "title": "Jellyfishp🪼的小店 - 链动小铺",
+      "url": "https://www.ldxp.cn/shop/jellyfishp",
+      "description": "super grok",
+      "addedAt": "2026-07-11T07:19:22.466Z"
     }
   ]
 }
