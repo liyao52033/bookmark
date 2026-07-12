@@ -504,11 +504,18 @@
       "url": "https://pay.ldxp.cn/shop/QJNPHN5B"
     },
     {
+      "addedAt": "2026-07-11T07:19:22.466Z",
+      "description": "super grok",
       "id": "mrg1aiqqif242e0e06m",
       "title": "Jellyfishp🪼的小店 - 链动小铺",
-      "url": "https://www.ldxp.cn/shop/jellyfishp",
-      "description": "super grok",
-      "addedAt": "2026-07-11T07:19:22.466Z"
+      "url": "https://www.ldxp.cn/shop/jellyfishp"
+    },
+    {
+      "id": "mrht0hzopmr5bw3gszk",
+      "title": "一梦AI的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/yimengai",
+      "description": "",
+      "addedAt": "2026-07-12T13:03:10.356Z"
     }
   ]
 }
