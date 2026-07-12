@@ -365,11 +365,11 @@
       "url": "https://gmail.31tu.com/"
     },
     {
+      "addedAt": "2026-07-12T13:16:30.429Z",
+      "description": "",
       "id": "mrhthnbxt5l9d1z3fcp",
       "title": "BPSUB Snippets订阅生成器",
-      "url": "https://bp.sub.cmliussss.net/",
-      "description": "",
-      "addedAt": "2026-07-12T13:16:30.429Z"
+      "url": "https://bp.sub.cmliussss.net/"
     }
   ],
   "接码平台": [
@@ -530,6 +530,13 @@
       "id": "mrht118w7m3zurqwycv",
       "title": "NiuGe AI 加钟站的小店 - 链动小铺",
       "url": "https://pay.ldxp.cn/shop/GU3XQH61"
+    },
+    {
+      "id": "mrhtkv5du2sz0q4k9l",
+      "title": "icloud 邮箱 GPT PLUS直营店的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/A87R3DZP",
+      "description": "",
+      "addedAt": "2026-07-12T13:19:00.529Z"
     }
   ]
 }
