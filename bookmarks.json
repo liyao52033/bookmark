@@ -511,11 +511,18 @@
       "url": "https://www.ldxp.cn/shop/jellyfishp"
     },
     {
+      "addedAt": "2026-07-12T13:03:10.356Z",
+      "description": "",
       "id": "mrht0hzopmr5bw3gszk",
       "title": "一梦AI的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/yimengai",
+      "url": "https://pay.ldxp.cn/shop/yimengai"
+    },
+    {
+      "id": "mrht118w7m3zurqwycv",
+      "title": "NiuGe AI 加钟站的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/GU3XQH61",
       "description": "",
-      "addedAt": "2026-07-12T13:03:10.356Z"
+      "addedAt": "2026-07-12T13:03:35.312Z"
     }
   ]
 }
