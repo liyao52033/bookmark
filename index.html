@@ -481,10 +481,6 @@
             position: relative;
         }
 
-        .bookmark-card.dragging {
-            opacity: 0.5;
-        }
-
         .bookmark-card .card-actions {
             display: none;
             gap: 0.4rem;
@@ -511,24 +507,103 @@
             color: #c62828;
         }
 
-        .bookmark-card .drag-handle {
+        .category-header-actions {
             display: none;
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
+            margin-left: auto;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        body.admin-mode .category-header-actions {
+            display: flex;
+        }
+
+        .category-header-actions button {
+            border: none;
+            border-radius: 16px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .category-header-actions .sort-category {
+            background: var(--primary-color);
+        }
+
+        .category-header-actions .add-in-category {
+            background: var(--accent-color);
+        }
+
+        .sort-list {
+            list-style: none;
+            margin: 0.5rem 0 0;
+            padding: 0;
+            max-height: 55vh;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+        }
+
+        .sort-list-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f0f0f0;
+            background: #fff;
             cursor: grab;
-            color: #999;
-            padding: 0.25rem 0.4rem;
             user-select: none;
         }
 
-        body.admin-mode .bookmark-card .drag-handle {
-            display: block;
+        .sort-list-item:last-child {
+            border-bottom: none;
         }
 
-        body.admin-mode.searching .bookmark-card .drag-handle {
-            display: none;
-            pointer-events: none;
+        .sort-list-item.dragging {
+            opacity: 0.45;
+            background: #e3f2fd;
+        }
+
+        .sort-list-item .sort-grip {
+            color: #999;
+            flex-shrink: 0;
+        }
+
+        .sort-list-item .sort-title {
+            flex: 1;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            word-break: break-all;
+        }
+
+        .sort-list-item .sort-index {
+            width: 3rem;
+            flex-shrink: 0;
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.2rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            color: var(--text-color);
+            background: #fafafa;
+            outline: none;
+            -moz-appearance: textfield;
+        }
+
+        .sort-list-item .sort-index:focus {
+            border-color: var(--accent-color);
+            background: #fff;
+        }
+
+        .sort-list-item .sort-index::-webkit-outer-spin-button,
+        .sort-list-item .sort-index::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .modal.modal-wide {
+            max-width: 480px;
         }
 
         .fab-add {
@@ -558,22 +633,6 @@
         .fab-add:hover {
             background-color: #0288d1;
             transform: scale(1.05);
-        }
-
-        .category-header .add-in-category {
-            display: none;
-            margin-left: auto;
-            border: none;
-            background: var(--accent-color);
-            color: white;
-            border-radius: 16px;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-            cursor: pointer;
-        }
-
-        body.admin-mode .category-header .add-in-category {
-            display: inline-block;
         }
 
         @media (max-width: 768px) {
@@ -747,6 +806,19 @@
                 <button type="button" class="btn-primary" id="bm-save-btn">保存</button>
             </div>
             <div class="modal-status" id="bm-status"></div>
+        </div>
+    </div>
+
+    <!-- 分类内排序弹窗：拖动标题上下调整顺序 -->
+    <div class="modal-overlay" id="sort-modal" role="dialog" aria-modal="true">
+        <div class="modal modal-wide">
+            <h3 id="sort-modal-title">排序</h3>
+            <p class="modal-desc">拖动标题上下移动调整顺序（仅改本地草稿，需提交到 GitHub 才生效）</p>
+            <ul class="sort-list" id="sort-list"></ul>
+            <div class="modal-actions">
+                <button type="button" class="btn-secondary" id="sort-cancel-btn">取消</button>
+                <button type="button" class="btn-primary" id="sort-done-btn">完成</button>
+            </div>
         </div>
     </div>
 

@@ -13,7 +13,8 @@ let adminConfig = {
     jsonPath: 'bookmarks.json'
 };
 let searchActive = false;
-let dragState = { category: null, id: null };
+let sortModalCategory = null;
+let sortModalSnapshot = null;
 
 const LS_KEYS = {
     repo: 'bookmarkAdmin.repo',
@@ -101,12 +102,24 @@ function renderBookmarks(data = bookmarksData) {
             <span class="count">${bookmarks.length}</span>
         `;
         if (isAdmin) {
+            const actions = document.createElement('div');
+            actions.className = 'category-header-actions';
+
+            const sortBtn = document.createElement('button');
+            sortBtn.type = 'button';
+            sortBtn.className = 'sort-category';
+            sortBtn.textContent = '排序';
+            sortBtn.addEventListener('click', () => openSortModal(category));
+            actions.appendChild(sortBtn);
+
             const addBtn = document.createElement('button');
             addBtn.type = 'button';
             addBtn.className = 'add-in-category';
             addBtn.textContent = '+ 添加';
             addBtn.addEventListener('click', () => openBookmarkModal({ category }));
-            header.appendChild(addBtn);
+            actions.appendChild(addBtn);
+
+            header.appendChild(actions);
         }
         section.appendChild(header);
 
@@ -121,10 +134,6 @@ function renderBookmarks(data = bookmarksData) {
 
         section.appendChild(grid);
         container.appendChild(section);
-
-        if (isAdmin && !searchActive) {
-            setupGridDrag(grid, category);
-        }
     });
 }
 
@@ -133,12 +142,6 @@ function createBookmarkCard(bookmark, category) {
     card.classList.add('bookmark-card');
     card.dataset.id = bookmark.id;
     card.dataset.category = category;
-
-    const handle = document.createElement('span');
-    handle.className = 'drag-handle';
-    handle.title = '拖动排序';
-    handle.innerHTML = '<i class="fas fa-grip-vertical"></i>';
-    card.appendChild(handle);
 
     const title = document.createElement('h3');
     title.textContent = bookmark.title || '';
@@ -247,72 +250,202 @@ function searchBookmarks(query) {
     renderBookmarks(results);
 }
 
-// ---------- 拖拽排序（同分类） ----------
+// ---------- 分类内排序弹窗（拖动标题） ----------
 
-function setupGridDrag(grid, category) {
+function openSortModal(category) {
+    if (!isAdmin || !bookmarksData[category] || bookmarksData[category].length === 0) {
+        alert('该分类暂无书签可排序');
+        return;
+    }
+
+    sortModalCategory = category;
+    sortModalSnapshot = deepClone(bookmarksData[category]);
+
+    document.getElementById('sort-modal-title').textContent = `排序 · ${category}`;
+    renderSortList(bookmarksData[category]);
+    document.getElementById('sort-modal').classList.add('visible');
+}
+
+function renderSortList(items) {
+    const list = document.getElementById('sort-list');
+    list.innerHTML = '';
+
+    items.forEach((bookmark, index) => {
+        const li = document.createElement('li');
+        li.className = 'sort-list-item';
+        li.draggable = true;
+        li.dataset.id = bookmark.id;
+
+        const grip = document.createElement('span');
+        grip.className = 'sort-grip';
+        grip.innerHTML = '<i class="fas fa-grip-vertical"></i>';
+
+        const title = document.createElement('span');
+        title.className = 'sort-title';
+        title.textContent = bookmark.title || '(无标题)';
+
+        const idx = document.createElement('input');
+        idx.type = 'number';
+        idx.className = 'sort-index';
+        idx.min = '1';
+        idx.step = '1';
+        idx.value = String(index + 1);
+        idx.title = '输入目标序号，与该位置交换';
+        idx.addEventListener('mousedown', (e) => e.stopPropagation());
+        idx.addEventListener('click', (e) => e.stopPropagation());
+        idx.addEventListener('dragstart', (e) => e.preventDefault());
+        idx.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyIndexSwap(li, idx);
+                idx.blur();
+            }
+        });
+        idx.addEventListener('change', () => applyIndexSwap(li, idx));
+        idx.addEventListener('blur', () => {
+            // 非法输入时恢复显示当前真实序号
+            renumberSortList(list);
+        });
+
+        li.appendChild(grip);
+        li.appendChild(title);
+        li.appendChild(idx);
+        list.appendChild(li);
+    });
+
+    setupSortListDrag(list);
+}
+
+/**
+ * 把当前行序号改成目标编号：与目标位置的那一项交换位置
+ * 例：第 1 项改成 5 → 与第 5 项对调
+ */
+function applyIndexSwap(li, inputEl) {
+    const list = document.getElementById('sort-list');
+    if (!list || !li) return;
+
+    const items = Array.from(list.querySelectorAll('.sort-list-item'));
+    const fromIndex = items.indexOf(li);
+    if (fromIndex < 0) return;
+
+    const raw = String(inputEl.value).trim();
+    const target = parseInt(raw, 10);
+    const max = items.length;
+
+    if (!Number.isFinite(target) || target < 1 || target > max) {
+        inputEl.value = String(fromIndex + 1);
+        return;
+    }
+
+    const toIndex = target - 1;
+    if (toIndex === fromIndex) {
+        inputEl.value = String(fromIndex + 1);
+        return;
+    }
+
+    // 数组交换后按新顺序重新挂到列表
+    const tmp = items[fromIndex];
+    items[fromIndex] = items[toIndex];
+    items[toIndex] = tmp;
+    items.forEach(el => list.appendChild(el));
+
+    renumberSortList(list);
+    applySortListOrder(list);
+}
+
+function setupSortListDrag(list) {
     let dragged = null;
 
-    grid.querySelectorAll('.bookmark-card').forEach(card => {
-        card.draggable = true;
-
-        card.addEventListener('dragstart', (e) => {
-            if (searchActive || !isAdmin) {
-                e.preventDefault();
-                return;
-            }
-            dragged = card;
-            dragState = { category, id: card.dataset.id };
-            card.classList.add('dragging');
+    list.querySelectorAll('.sort-list-item').forEach(item => {
+        item.addEventListener('dragstart', (e) => {
+            dragged = item;
+            item.classList.add('dragging');
             e.dataTransfer.effectAllowed = 'move';
-            e.dataTransfer.setData('text/plain', card.dataset.id);
+            e.dataTransfer.setData('text/plain', item.dataset.id);
         });
 
-        card.addEventListener('dragend', () => {
-            card.classList.remove('dragging');
+        item.addEventListener('dragend', () => {
+            item.classList.remove('dragging');
             dragged = null;
-            applyOrderFromDom(category);
+            renumberSortList(list);
+            applySortListOrder(list);
         });
 
-        card.addEventListener('dragover', (e) => {
+        item.addEventListener('dragover', (e) => {
             e.preventDefault();
-            if (!dragged || dragged === card) return;
-            if (card.dataset.category !== category) return;
+            if (!dragged || dragged === item) return;
 
-            const rect = card.getBoundingClientRect();
+            const rect = item.getBoundingClientRect();
             const midY = rect.top + rect.height / 2;
             if (e.clientY < midY) {
-                grid.insertBefore(dragged, card);
+                list.insertBefore(dragged, item);
             } else {
-                grid.insertBefore(dragged, card.nextSibling);
+                list.insertBefore(dragged, item.nextSibling);
             }
         });
     });
 
-    grid.addEventListener('dragover', (e) => e.preventDefault());
-    grid.addEventListener('drop', (e) => e.preventDefault());
+    list.addEventListener('dragover', (e) => e.preventDefault());
+    list.addEventListener('drop', (e) => e.preventDefault());
 }
 
-function applyOrderFromDom(category) {
-    const grid = document.getElementById(`grid-${category}`);
-    if (!grid || !bookmarksData[category]) return;
+function renumberSortList(list) {
+    list.querySelectorAll('.sort-list-item').forEach((item, index) => {
+        const idx = item.querySelector('.sort-index');
+        if (idx) idx.value = String(index + 1);
+    });
+}
 
-    const ids = Array.from(grid.querySelectorAll('.bookmark-card')).map(c => c.dataset.id);
-    const map = new Map(bookmarksData[category].map(b => [b.id, b]));
+function applySortListOrder(list) {
+    if (!sortModalCategory || !bookmarksData[sortModalCategory]) return;
+
+    const ids = Array.from(list.querySelectorAll('.sort-list-item')).map(el => el.dataset.id);
+    const map = new Map(bookmarksData[sortModalCategory].map(b => [b.id, b]));
     const reordered = ids.map(id => map.get(id)).filter(Boolean);
 
-    // 保留 DOM 中未出现的（理论上没有）
-    if (reordered.length !== bookmarksData[category].length) {
-        bookmarksData[category].forEach(b => {
-            if (!ids.includes(b.id)) reordered.push(b);
-        });
-    }
-
-    const prev = JSON.stringify(bookmarksData[category].map(b => b.id));
+    const prev = JSON.stringify(bookmarksData[sortModalCategory].map(b => b.id));
     const next = JSON.stringify(reordered.map(b => b.id));
     if (prev !== next) {
-        bookmarksData[category] = reordered;
+        bookmarksData[sortModalCategory] = reordered;
         markDirty();
     }
+}
+
+function syncDirtyWithServer() {
+    if (serverSnapshot && JSON.stringify(bookmarksData) === JSON.stringify(serverSnapshot)) {
+        clearDirty();
+    } else {
+        dirty = true;
+        updateDirtyUI();
+    }
+}
+
+function closeSortModal(revert) {
+    if (revert && sortModalCategory && sortModalSnapshot) {
+        bookmarksData[sortModalCategory] = deepClone(sortModalSnapshot);
+        syncDirtyWithServer();
+    }
+
+    document.getElementById('sort-modal').classList.remove('visible');
+    sortModalCategory = null;
+    sortModalSnapshot = null;
+
+    if (!searchActive) {
+        renderBookmarks();
+    } else {
+        searchBookmarks(document.getElementById('search-input').value);
+    }
+    renderCategoryNav();
+}
+
+function finishSortModal() {
+    const list = document.getElementById('sort-list');
+    applySortListOrder(list);
+    closeSortModal(false);
+}
+
+function cancelSortModal() {
+    closeSortModal(true);
 }
 
 // ---------- Dirty / 编辑模式 UI ----------
@@ -827,9 +960,14 @@ function setupEventListeners() {
     document.getElementById('bookmark-modal').addEventListener('click', (e) => {
         if (e.target.id === 'bookmark-modal') closeBookmarkModal();
     });
+    document.getElementById('sort-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'sort-modal') cancelSortModal();
+    });
 
     document.getElementById('fab-add').addEventListener('click', () => openBookmarkModal({}));
     document.getElementById('bm-save-btn').addEventListener('click', saveBookmarkFromModal);
+    document.getElementById('sort-done-btn').addEventListener('click', finishSortModal);
+    document.getElementById('sort-cancel-btn').addEventListener('click', cancelSortModal);
 
     document.getElementById('commit-btn').addEventListener('click', commitToGitHub);
     document.getElementById('discard-btn').addEventListener('click', discardChanges);
