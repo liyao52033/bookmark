@@ -15,7 +15,7 @@
 
 ## 目标
 
-1. **两步登录**：先校验管理密码，通过后再填写 GitHub 仓库 + Token
+1. **两步登录**：先调远程账号登录接口，通过后再填写 GitHub 仓库 + Token
 2. 用 GitHub Token 取得写权限（与插件同一 API 模型）
 3. 编辑模式支持：增、删、改、分类内拖动排序
 4. **本地草稿 + 显式提交**：任意次操作只改内存，一次 PUT 一个 commit
@@ -24,9 +24,9 @@
 ## 非目标（第一版不做）
 
 - 分类删除、重命名、分类间拖动/排序
-- 后端/服务端密码鉴权
+- 前端哈希密码（已改为远程登录）
 - 修改 Chrome 插件行为
-- GitHub OAuth / Cloudflare Workers 代理
+- 自建登录后端
 
 ## 架构
 
@@ -69,10 +69,10 @@ fetch('bookmarks.json')    GitHub Contents API GET
 点「管理」
    │
    ▼
-步骤 1：输入管理密码
-   │  SHA-256(输入) === ADMIN_PASSWORD_HASH ?
+步骤 1：输入邮箱 + 密码
+   │  POST https://ssl.xiaoying.org.cn/login
    │  否 → 错误提示，停在步骤 1
-   ▼ 是
+   ▼ 是（200 且含 user/session）
 步骤 2：输入 GitHub 仓库 / Token / JSON 路径
    │  GET Contents API 校验
    │  否 → 错误提示，停在步骤 2
@@ -80,18 +80,20 @@ fetch('bookmarks.json')    GitHub Contents API GET
 进入编辑模式
 ```
 
-说明：静态站无后端，密码哈希写在前端，只能挡住不会看源码的访客；真正的写权限仍依赖 GitHub Token。
+说明：账号鉴权走现成登录服务；真正改仓库仍依赖用户提供的 GitHub Token。邮箱/密码**不**写入书签仓库代码。
 
-### 步骤 1：管理密码
+### 步骤 1：远程登录
 
 | 项 | 说明 |
 |----|------|
-| 存储 | 源码常量 `ADMIN_PASSWORD_HASH`（密码的 SHA-256 十六进制小写） |
-| 初始密码 | 临时 `admin123`（上线前务必更换） |
-| 初始哈希 | `240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9`；换密码：`echo -n '新密码' \| sha256sum` 后替换常量 |
-| 校验 | `crypto.subtle.digest('SHA-256', ...)` 对输入做哈希后比对 |
-| 明文 | **不**写入仓库；改密码 = 重新算哈希替换常量 |
-| 会话 | 密码通过后仅在当前页内存标记 `passwordOk = true`；刷新后需重输密码；关闭弹窗清除 `passwordOk` |
+| 接口 | `POST https://ssl.xiaoying.org.cn/login` |
+| Body | `JSON.stringify({ email, password })`，`Content-Type: text/plain;charset=UTF-8` |
+| 请求 | `mode: 'cors'`, `credentials: 'include'` |
+| 成功 | HTTP 200，body 含 `user` / `session` → `passwordOk = true` |
+| 失败 | HTTP 401 等 → 展示错误（如 `error` 字段或通用「登录失败」） |
+| 明文 | 密码仅用于当次请求，不写 localStorage、不写仓库 |
+| 邮箱 | 可选记在 `localStorage`（`bookmarkAdmin.email`）方便预填 |
+| 会话 | 仅内存 `passwordOk`；刷新或关闭弹窗需重新登录 |
 
 ### 步骤 2：GitHub 表单字段
 
@@ -196,29 +198,30 @@ fetch('bookmarks.json')    GitHub Contents API GET
 
 ## 错误处理与边界
 
-- 未登录点管理 → 步骤 1 密码框
-- 密码错误 → 明确提示，不进入步骤 2
+- 未登录点管理 → 步骤 1 登录框（邮箱+密码）
+- 登录失败 → 明确提示，不进入步骤 2
 - 有 dirty 时退出/关闭页：`beforeunload` 提示（浏览器原生）
 - 网络失败：按钮恢复可点，错误文案可见
-- XSS：渲染 title/description 时用 `textContent` 或转义，避免 `innerHTML` 直接插用户输入（现有代码有 innerHTML 风险，编辑写入路径须避免把未转义用户输入拼进 HTML）
-- 安全预期：密码哈希可被逆向暴力破解（弱密码尤甚）；Token 存在本机 localStorage，共用电脑有泄露风险
+- XSS：渲染 title/description 时用 `textContent` 或转义，避免 `innerHTML` 直接插用户输入
+- GitHub Token 可存 localStorage；登录密码不存
 
 ## 测试要点
 
-1. 错误密码无法进入步骤 2
-2. 正确密码 + 错误 Token 无法进入编辑模式
+1. 错误账号/密码无法进入步骤 2
+2. 登录成功 + 错误 Token 无法进入编辑模式
 3. 完整登录后，增/删/改/排序后 GitHub 上无新 commit
 4. 点提交后仓库 `bookmarks.json` 一次更新，内容与界面一致
 5. 丢弃更改后界面回到提交前状态
 6. 访客模式 UI 与改前一致
 7. 同分类拖动顺序写入 JSON 数组顺序正确
 8. 提交冲突（模拟旧 sha）有明确错误提示
-9. 刷新页面后需重新输入密码
+9. 刷新页面后需重新远程登录
 
 ## 成功标准
 
-- 必须先过密码再填 Token，二者都通过才能进入编辑模式
+- 必须先远程登录再填 Token，二者都通过才能进入编辑模式
 - 管理员可完成书签 CRUD + 同分类排序
 - 多次编辑后仅在显式提交时产生 **一个** GitHub commit
 - 未登录用户无法触发写 GitHub
 - 插件现有功能不受影响
+- 仓库中无登录密码明文
