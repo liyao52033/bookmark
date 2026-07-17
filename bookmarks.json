@@ -539,11 +539,18 @@
       "url": "https://pay.ldxp.cn/shop/A87R3DZP"
     },
     {
+      "addedAt": "2026-07-13T08:05:17.439Z",
+      "description": "",
       "id": "mrixt9trt742rjfqxtp",
       "title": "Sy小铺的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/shanyuan",
+      "url": "https://pay.ldxp.cn/shop/shanyuan"
+    },
+    {
+      "id": "mroymzcaomp0sj0dvt",
+      "title": "LD士多 - LinuxDo站点积分兑换中心",
+      "url": "https://ldcstore.com/",
       "description": "",
-      "addedAt": "2026-07-13T08:05:17.439Z"
+      "addedAt": "2026-07-17T13:15:00.586Z"
     }
   ]
 }
