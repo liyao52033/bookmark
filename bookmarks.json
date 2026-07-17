@@ -441,11 +441,11 @@
       "url": "https://gpt.learnlicen.dpdns.org/"
     },
     {
+      "addedAt": "2026-07-17T17:49:08.835Z",
+      "description": "",
       "id": "mrp8fiw3uze71n3fm1f",
       "title": "Hug AI的小店 - 链动小铺",
-      "url": "https://pay.ldxp.cn/shop/4UOATQTU",
-      "description": "",
-      "addedAt": "2026-07-17T17:49:08.835Z"
+      "url": "https://pay.ldxp.cn/shop/4UOATQTU"
     },
     {
       "addedAt": "2026-07-12T13:03:35.312Z",
@@ -551,6 +551,15 @@
       "id": "mq20ep2zw6qxa22rmos",
       "title": "中国词元联盟总代理",
       "url": "https://llm.mathmodel.tech/dashboard/models"
+    }
+  ],
+  "邮箱": [
+    {
+      "id": "mrpdfuvm4gbz7ld8ta6",
+      "title": "九邮 - 优质微软邮箱批发_微软邮箱购买_微软邮箱出售",
+      "url": "https://www.nineemail.com/",
+      "description": "",
+      "addedAt": "2026-07-17T20:09:22.450Z"
     }
   ]
 }
