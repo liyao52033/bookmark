@@ -546,11 +546,18 @@
       "url": "https://pay.ldxp.cn/shop/shanyuan"
     },
     {
+      "addedAt": "2026-07-17T13:15:00.586Z",
+      "description": "",
       "id": "mroymzcaomp0sj0dvt",
       "title": "LD士多 - LinuxDo站点积分兑换中心",
-      "url": "https://ldcstore.com/",
+      "url": "https://ldcstore.com/"
+    },
+    {
+      "id": "mrp8fiw3uze71n3fm1f",
+      "title": "Hug AI的小店 - 链动小铺",
+      "url": "https://pay.ldxp.cn/shop/4UOATQTU",
       "description": "",
-      "addedAt": "2026-07-17T13:15:00.586Z"
+      "addedAt": "2026-07-17T17:49:08.835Z"
     }
   ]
 }
