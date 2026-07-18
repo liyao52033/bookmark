@@ -1,13 +1,13 @@
-// 复制本文件为 env.js 后填写实际值（env.js 已加入 .gitignore，勿提交密钥/内网地址）
-// 纯静态页没有 process.env，用 window.__ENV__ 模拟「环境变量」
-// 部署时也可用构建脚本把系统环境变量写入 env.js，或在 HTML 中加：
-//   <meta name="env:LOGIN_URL" content="https://example.com/login">
+// 本地纯静态预览用（无 EdgeOne dev 时）。复制为 env.js 后填写。
+// EdgeOne Pages 部署时请用平台环境变量 + /api/runtime-config，不必依赖本文件：
+//   1. 仓库根目录 .env.example 已声明 LOGIN_URL 等键（供 CLI 识别）
+//   2. 控制台填写，或：edgeone makers env set LOGIN_URL "https://your-login-api"
+//   3. 可选：edgeone makers env set LOGIN_EMAIL_FIELD email
+//            edgeone makers env set LOGIN_PASSWORD_FIELD password
+//   4. 前端通过 GET /api/runtime-config 读取 context.env
 
 window.__ENV__ = {
-  // 必填：账号登录接口地址。未配置时登录会直接报错
   LOGIN_URL: 'https://ssl.xiaoying.org.cn/login',
-
-  // 可选：请求体里邮箱/密码字段名。不填则默认 email / password
   // LOGIN_EMAIL_FIELD: 'email',
   // LOGIN_PASSWORD_FIELD: 'password'
 };

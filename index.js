@@ -24,10 +24,12 @@ const LS_KEYS = {
     email: 'bookmarkAdmin.email'
 };
 
-// 登录配置：从运行时环境变量 window.__ENV__ / meta[name="env:KEY"] 读取
-// LOGIN_URL 必填；请求体字段名默认 email / password
+// 登录配置：优先 EdgeOne Pages 环境变量（经 /api/runtime-config 注入），
+// 其次 window.__ENV__（本地 env.js）、再 meta[name="env:KEY"]。
+// LOGIN_URL 必填；请求体字段名未配置时默认 email / password。
 const DEFAULT_LOGIN_EMAIL_FIELD = 'email';
 const DEFAULT_LOGIN_PASSWORD_FIELD = 'password';
+let runtimeEnvLoaded = false;
 
 function getEnv(name, fallback) {
     const env = (typeof window !== 'undefined' && window.__ENV__) ? window.__ENV__ : {};
@@ -45,10 +47,33 @@ function getEnv(name, fallback) {
     return undefined;
 }
 
+/**
+ * 从 EdgeOne Edge Function 拉取平台环境变量（LOGIN_URL 等）。
+ * 纯静态本地若接口不存在则静默跳过，继续用 env.js。
+ */
+async function loadRuntimeEnv() {
+    if (runtimeEnvLoaded) return;
+    try {
+        const res = await fetch('/api/runtime-config', { cache: 'no-store' });
+        if (res.ok) {
+            const data = await res.json();
+            if (data && typeof data === 'object') {
+                window.__ENV__ = Object.assign({}, window.__ENV__ || {}, data);
+            }
+        }
+    } catch (_) {
+        // 无 Edge Function / 离线：依赖 env.js 或 meta
+    } finally {
+        runtimeEnvLoaded = true;
+    }
+}
+
 function getLoginUrl() {
     const url = getEnv('LOGIN_URL');
     if (!url) {
-        throw new Error('未配置环境变量 LOGIN_URL（请在 env.js 的 window.__ENV__ 中设置）');
+        throw new Error(
+            '未配置环境变量 LOGIN_URL。EdgeOne：控制台或 edgeone makers env set LOGIN_URL "https://..."；本地可写 env.js'
+        );
     }
     return url;
 }
@@ -774,6 +799,8 @@ async function handleRemoteLogin() {
         return;
     }
 
+    await loadRuntimeEnv();
+
     let loginUrl;
     try {
         loginUrl = getLoginUrl();
@@ -1287,5 +1314,6 @@ function setupEventListeners() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
+    loadRuntimeEnv();
     loadBookmarks();
 });
