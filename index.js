@@ -15,6 +15,7 @@ let adminConfig = {
 let searchActive = false;
 let sortModalCategory = null;
 let sortModalSnapshot = null;
+let categorySortSnapshot = null;
 
 const LS_KEYS = {
     repo: 'bookmarkAdmin.repo',
@@ -448,6 +449,199 @@ function cancelSortModal() {
     closeSortModal(true);
 }
 
+// ---------- 分类排序弹窗（调整分类 key 顺序） ----------
+
+function getNonEmptyCategoryNames(data = bookmarksData) {
+    return Object.keys(data).filter(k => data[k] && data[k].length > 0);
+}
+
+function reorderCategories(orderedNames) {
+    const next = {};
+    for (const name of orderedNames) {
+        if (Object.prototype.hasOwnProperty.call(bookmarksData, name)) {
+            next[name] = bookmarksData[name];
+        }
+    }
+    for (const name of Object.keys(bookmarksData)) {
+        if (!Object.prototype.hasOwnProperty.call(next, name)) {
+            next[name] = bookmarksData[name];
+        }
+    }
+    const prevKeys = JSON.stringify(Object.keys(bookmarksData));
+    const nextKeys = JSON.stringify(Object.keys(next));
+    if (prevKeys !== nextKeys) {
+        bookmarksData = next;
+        markDirty();
+    }
+}
+
+function openCategorySortModal() {
+    if (!isAdmin) return;
+    const names = getNonEmptyCategoryNames();
+    if (names.length === 0) {
+        alert('暂无分类可排序');
+        return;
+    }
+    categorySortSnapshot = deepClone(bookmarksData);
+    renderCategorySortList(names);
+    document.getElementById('category-sort-modal').classList.add('visible');
+}
+
+function renderCategorySortList(names) {
+    const list = document.getElementById('category-sort-list');
+    list.innerHTML = '';
+
+    names.forEach((name, index) => {
+        const li = document.createElement('li');
+        li.className = 'sort-list-item';
+        li.draggable = true;
+        li.dataset.category = name;
+
+        const grip = document.createElement('span');
+        grip.className = 'sort-grip';
+        grip.innerHTML = '<i class="fas fa-grip-vertical"></i>';
+
+        const title = document.createElement('span');
+        title.className = 'sort-title';
+        title.textContent = name;
+
+        const idx = document.createElement('input');
+        idx.type = 'number';
+        idx.className = 'sort-index';
+        idx.min = '1';
+        idx.step = '1';
+        idx.value = String(index + 1);
+        idx.title = '输入目标序号，与该位置交换';
+        idx.addEventListener('mousedown', (e) => e.stopPropagation());
+        idx.addEventListener('click', (e) => e.stopPropagation());
+        idx.addEventListener('dragstart', (e) => e.preventDefault());
+        idx.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyCategoryIndexSwap(li, idx);
+                idx.blur();
+            }
+        });
+        idx.addEventListener('change', () => applyCategoryIndexSwap(li, idx));
+        idx.addEventListener('blur', () => renumberSortList(list));
+
+        li.appendChild(grip);
+        li.appendChild(title);
+        li.appendChild(idx);
+        list.appendChild(li);
+    });
+
+    setupCategorySortListDrag(list);
+}
+
+function applyCategorySortListOrder(list) {
+    if (!list) return;
+    const names = Array.from(list.querySelectorAll('.sort-list-item'))
+        .map(el => el.dataset.category)
+        .filter(Boolean);
+    reorderCategories(names);
+}
+
+function applyCategoryIndexSwap(li, inputEl) {
+    const list = document.getElementById('category-sort-list');
+    if (!list || !li) return;
+
+    const items = Array.from(list.querySelectorAll('.sort-list-item'));
+    const fromIndex = items.indexOf(li);
+    if (fromIndex < 0) return;
+
+    const target = parseInt(String(inputEl.value).trim(), 10);
+    const max = items.length;
+
+    if (!Number.isFinite(target) || target < 1 || target > max) {
+        inputEl.value = String(fromIndex + 1);
+        return;
+    }
+
+    const toIndex = target - 1;
+    if (toIndex === fromIndex) {
+        inputEl.value = String(fromIndex + 1);
+        return;
+    }
+
+    const tmp = items[fromIndex];
+    items[fromIndex] = items[toIndex];
+    items[toIndex] = tmp;
+    items.forEach(el => list.appendChild(el));
+
+    renumberSortList(list);
+    applyCategorySortListOrder(list);
+}
+
+function setupCategorySortListDrag(list) {
+    let dragged = null;
+
+    list.querySelectorAll('.sort-list-item').forEach(item => {
+        item.addEventListener('dragstart', (e) => {
+            dragged = item;
+            item.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', item.dataset.category || '');
+        });
+
+        item.addEventListener('dragend', () => {
+            item.classList.remove('dragging');
+            dragged = null;
+            renumberSortList(list);
+            applyCategorySortListOrder(list);
+        });
+
+        item.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            if (!dragged || dragged === item) return;
+
+            const rect = item.getBoundingClientRect();
+            const midY = rect.top + rect.height / 2;
+            if (e.clientY < midY) {
+                list.insertBefore(dragged, item);
+            } else {
+                list.insertBefore(dragged, item.nextSibling);
+            }
+        });
+    });
+
+    list.addEventListener('dragover', (e) => e.preventDefault());
+    list.addEventListener('drop', (e) => e.preventDefault());
+}
+
+function forceCloseCategorySortModal() {
+    const modal = document.getElementById('category-sort-modal');
+    if (modal) modal.classList.remove('visible');
+    categorySortSnapshot = null;
+}
+
+function closeCategorySortModal(revert) {
+    if (revert && categorySortSnapshot) {
+        bookmarksData = deepClone(categorySortSnapshot);
+        syncDirtyWithServer();
+    }
+
+    document.getElementById('category-sort-modal').classList.remove('visible');
+    categorySortSnapshot = null;
+
+    if (!searchActive) {
+        renderBookmarks();
+    } else {
+        searchBookmarks(document.getElementById('search-input').value);
+    }
+    renderCategoryNav();
+}
+
+function finishCategorySortModal() {
+    const list = document.getElementById('category-sort-list');
+    applyCategorySortListOrder(list);
+    closeCategorySortModal(false);
+}
+
+function cancelCategorySortModal() {
+    closeCategorySortModal(true);
+}
+
 // ---------- Dirty / 编辑模式 UI ----------
 
 function markDirty() {
@@ -483,6 +677,7 @@ function enterAdminMode() {
 }
 
 function exitAdminMode() {
+    forceCloseCategorySortModal();
     isAdmin = false;
     passwordOk = false;
     document.body.classList.remove('admin-mode');
@@ -667,6 +862,63 @@ async function handleGitHubLogin() {
 
 // ---------- 书签 CRUD（仅内存） ----------
 
+function fillCategorySelect(selectedCategory = '') {
+    const select = document.getElementById('bm-category');
+    const newInput = document.getElementById('bm-category-new');
+
+    select.innerHTML = '';
+
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = '请选择已有分类';
+    select.appendChild(placeholder);
+
+    const names = Object.keys(bookmarksData);
+    names.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat;
+        opt.textContent = cat;
+        select.appendChild(opt);
+    });
+
+    // 每次打开都保留完整列表，不因已选值过滤
+    const exists = selectedCategory && names.includes(selectedCategory);
+    if (exists) {
+        select.value = selectedCategory;
+        newInput.value = '';
+    } else if (selectedCategory) {
+        select.value = '';
+        newInput.value = selectedCategory;
+    } else {
+        select.value = '';
+        newInput.value = '';
+    }
+}
+
+function onCategorySelectChange() {
+    const select = document.getElementById('bm-category');
+    const newInput = document.getElementById('bm-category-new');
+    // 选了已有分类时，清空新建框，避免保存时误走新建
+    if (select.value) {
+        newInput.value = '';
+    }
+}
+
+function onCategoryNewInput() {
+    const select = document.getElementById('bm-category');
+    const newInput = document.getElementById('bm-category-new');
+    // 开始输入新分类时，下拉回到占位，列表选项始终还在
+    if (newInput.value.trim()) {
+        select.value = '';
+    }
+}
+
+function getCategoryFromModal() {
+    const newName = document.getElementById('bm-category-new').value.trim();
+    if (newName) return newName;
+    return (document.getElementById('bm-category').value || '').trim();
+}
+
 function openBookmarkModal(pref = {}) {
     if (!isAdmin) return;
 
@@ -677,15 +929,8 @@ function openBookmarkModal(pref = {}) {
     document.getElementById('bm-title').value = pref.title || '';
     document.getElementById('bm-url').value = pref.url || '';
     document.getElementById('bm-description').value = pref.description || '';
-    document.getElementById('bm-category').value = pref.category || '';
 
-    const list = document.getElementById('category-list');
-    list.innerHTML = '';
-    Object.keys(bookmarksData).forEach(cat => {
-        const opt = document.createElement('option');
-        opt.value = cat;
-        list.appendChild(opt);
-    });
+    fillCategorySelect(pref.category || '');
 
     setModalStatus('bm-status', '', '');
     document.getElementById('bookmark-modal').classList.add('visible');
@@ -701,7 +946,7 @@ function saveBookmarkFromModal() {
     const title = document.getElementById('bm-title').value.trim();
     const url = document.getElementById('bm-url').value.trim();
     const description = document.getElementById('bm-description').value.trim();
-    const category = document.getElementById('bm-category').value.trim();
+    const category = getCategoryFromModal();
 
     if (!title) {
         setModalStatus('bm-status', 'error', '请输入标题');
@@ -712,7 +957,7 @@ function saveBookmarkFromModal() {
         return;
     }
     if (!category) {
-        setModalStatus('bm-status', 'error', '请输入分类');
+        setModalStatus('bm-status', 'error', '请选择已有分类，或输入新分类名称');
         return;
     }
 
@@ -823,6 +1068,7 @@ function getSearchResults() {
 function discardChanges() {
     if (!serverSnapshot) return;
     if (dirty && !confirm('确定丢弃所有未提交的更改？')) return;
+    forceCloseCategorySortModal();
     bookmarksData = deepClone(serverSnapshot);
     clearDirty();
     searchActive = false;
@@ -963,11 +1209,25 @@ function setupEventListeners() {
     document.getElementById('sort-modal').addEventListener('click', (e) => {
         if (e.target.id === 'sort-modal') cancelSortModal();
     });
+    document.getElementById('category-sort-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'category-sort-modal') cancelCategorySortModal();
+    });
 
     document.getElementById('fab-add').addEventListener('click', () => openBookmarkModal({}));
     document.getElementById('bm-save-btn').addEventListener('click', saveBookmarkFromModal);
+    document.getElementById('bm-category').addEventListener('change', onCategorySelectChange);
+    document.getElementById('bm-category-new').addEventListener('input', onCategoryNewInput);
+    document.getElementById('bm-category-new').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            saveBookmarkFromModal();
+        }
+    });
     document.getElementById('sort-done-btn').addEventListener('click', finishSortModal);
     document.getElementById('sort-cancel-btn').addEventListener('click', cancelSortModal);
+    document.getElementById('category-sort-btn').addEventListener('click', openCategorySortModal);
+    document.getElementById('category-sort-done-btn').addEventListener('click', finishCategorySortModal);
+    document.getElementById('category-sort-cancel-btn').addEventListener('click', cancelCategorySortModal);
 
     document.getElementById('commit-btn').addEventListener('click', commitToGitHub);
     document.getElementById('discard-btn').addEventListener('click', discardChanges);
