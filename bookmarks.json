@@ -1,374 +1,4 @@
 {
-  "AI": [
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "ChatGPT：触手可及的 AI——体验全球最受欢迎的 AI 助手",
-      "id": "m8a1aaz28t1fm0tirw4",
-      "title": "chatgpt",
-      "url": "https://chatgpt.com/"
-    },
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "使用 Claude 更智能地编写代码 — 通过个性化帮助，更智能地编写代码",
-      "id": "m8a1aaz28t1fm0claude",
-      "title": "claude",
-      "url": "https://claude.ai/"
-    },
-    {
-      "addedAt": "2025-04-05T04:47:19.823Z",
-      "description": "扣子是新一代AI 大模型智能体开发平台。整合了插件、长短期记忆、工作流、卡片等丰富能力，扣子能帮你低门槛、快速搭建个性化或具备商业价值的智能体",
-      "id": "m93qffnzwgtfcsncoze",
-      "title": "扣子空间",
-      "url": "https://www.coze.com/home"
-    },
-    {
-      "addedAt": "2025-04-05T04:47:19.823Z",
-      "description": "",
-      "id": "m93qffnzwgtfcsncwts",
-      "title": "Augment Code – 用于实际工作的开发人员 AI",
-      "url": "https://www.augmentcode.com/"
-    },
-    {
-      "addedAt": "2025-03-22T09:05:30.983Z",
-      "description": "获取创意灵感，提升工作效率",
-      "id": "m8jzhjdzdf4cwqu5st9",
-      "title": "Gemini",
-      "url": "https://gemini.google.com/app"
-    },
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "Kimi 是一款AI智能助手，由Moonshot 自研的大语言模型驱动，支持在线搜索、深度思考、多模态推理和超长文本对话",
-      "id": "m8a1aaz28t1fm0kimi",
-      "title": "kimi",
-      "url": "https://www.kimi.com/"
-    },
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "豆包是你的AI 聊天智能对话问答助手，写作文案翻译编程全能工具。豆包为你答疑解惑，提供灵感，辅助创作，也可以和你畅聊任何你感兴趣的话题",
-      "id": "m8a1aaz28t1fm0doubao",
-      "title": "豆包",
-      "url": "https://www.doubao.com"
-    },
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "专注于研究世界领先的通用人工智能底层模型与技术，挑战人工智能前沿性难题",
-      "id": "m8a1aaz28t1fmdeepseek",
-      "title": "DeepSeek",
-      "url": "https://chat.deepseek.com/"
-    },
-    {
-      "addedAt": "2025-08-11T09:58:10.958Z",
-      "description": "腾讯云代码助手CodeBuddy，是一款辅助编码工具，基于混元代码大模型，提供技术对话、代码补全、代码诊断和优化等能力。为你生成优质代码，帮你解决技术难题，提升编码效率",
-      "id": "m8a1aaz28t1fmcodebuddy",
-      "title": "Codebuddy",
-      "url": "https://www.codebuddy.ai/"
-    },
-    {
-      "addedAt": "2025-03-30T12:02:32.711Z",
-      "description": "阿里通义千问",
-      "id": "m8vlc0hz2lmxcykf0k3",
-      "title": "Qwen",
-      "url": "https://chat.qwen.ai/"
-    },
-    {
-      "addedAt": "2025-04-03T11:00:54.330Z",
-      "description": "",
-      "id": "m918w5h60aa554tx0iyh",
-      "title": "通义 - 你的个人AI助手",
-      "url": "https://tongyi.aliyun.com/"
-    },
-    {
-      "addedAt": "2025-04-03T11:09:30.855Z",
-      "description": "",
-      "id": "m9197813wgdps2jwv3k",
-      "title": "通义万相_AI创意作画_AI绘画_人工智能-阿里云",
-      "url": "https://tongyi.aliyun.com/wanxiang/"
-    },
-    {
-      "addedAt": "2025-04-12T04:04:50.559Z",
-      "description": "",
-      "id": "m9dozrb3eu4nsa7hxjt",
-      "title": "阿里云百炼",
-      "url": "https://bailian.console.aliyun.com/#/home"
-    },
-    {
-      "addedAt": "2025-04-14T12:49:14.825Z",
-      "description": "",
-      "id": "m9h2lumh2tlpwlhkrdu",
-      "title": "Agent TARS：最佳多模态 AI 智能体",
-      "url": "https://agenttars.ai/zh"
-    },
-    {
-      "addedAt": "2025-05-29T02:01:51.617Z",
-      "description": "",
-      "id": "mb8qan0h6lvsjc87f7p",
-      "title": "在线抠图软件_图片去除背景 | remove.bg – remove.bg",
-      "url": "https://www.remove.bg/zh"
-    },
-    {
-      "addedAt": "2025-05-30T07:11:46.864Z",
-      "description": "",
-      "id": "mbagt1v491ho8dasn09",
-      "title": "OpenRouter",
-      "url": "https://openrouter.ai/"
-    },
-    {
-      "addedAt": "2025-03-15T09:58:29.734Z",
-      "description": "最大的 MCP 服务器集合，包括 Awesome MCP 服务器和 Claude MCP 集成",
-      "id": "m8a1apgm3gg06fzvklm",
-      "title": "MCP.so",
-      "url": "https://mcp.so/clients"
-    },
-    {
-      "addedAt": "2025-04-10T09:02:03.408Z",
-      "description": "开源模型。海量各模态AI开源模型。一站式模型开发&应用工具。高质量且免费的数据集。丰富有趣的AI应用体验",
-      "id": "m9b4q9w0kyiky3plo1",
-      "title": "魔搭社区",
-      "url": "https://modelscope.cn/organization/qwen"
-    },
-    {
-      "addedAt": "2026-02-28T11:41:31.595Z",
-      "description": "一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式",
-      "id": "mm693cqza2scydcfaq",
-      "title": "OpenCode",
-      "url": "https://opencode.ai/docs/zh-cn/"
-    },
-    {
-      "addedAt": "2026-03-02T08:40:02.244Z",
-      "description": "AI 语义搜索或关键字筛选，按分类浏览，按热度排序。所有技能采用开放的 SKILL.md 标准，一键安装",
-      "id": "mm8xhnt0o26ftxxabjo",
-      "title": "Agent Skills 市场 - Claude、Codex 和 ChatGPT Skills | SkillsMP",
-      "url": "https://skillsmp.com/zh"
-    },
-    {
-      "addedAt": "2026-03-23T16:20:40.678Z",
-      "description": "google AI网站",
-      "id": "mn3e6xra59m5tk3aswu",
-      "title": "Google AI Studio",
-      "url": "https://aistudio.google.com/apps"
-    }
-  ],
-  "个人站点": [
-    {
-      "addedAt": "2025-12-10T10:10:18.153Z",
-      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
-      "id": "me6u9zexfafvuepress",
-      "title": "编程随笔",
-      "url": "https://xiaoying.org.cn/"
-    },
-    {
-      "addedAt": "2025-12-10T10:11:16.134Z",
-      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
-      "id": "me6ua4su2njc70v5rd8",
-      "title": "VitePress站点",
-      "url": "https://teek.xiaoying.org.cn/"
-    },
-    {
-      "addedAt": "2025-12-10T02:22:14.597Z",
-      "description": "一个基于 hugo 构建的技术文档与组件指库",
-      "id": "mizdvyo5k34au76521p",
-      "title": "组件库文档",
-      "url": "https://hugo.xiaoying.org.cn/"
-    }
-  ],
-  "云服务": [
-    {
-      "addedAt": "2025-08-11T08:14:54.445Z",
-      "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
-      "id": "me6u7f1pz8npq5nkp1o",
-      "title": "EdgeOne",
-      "url": "https://console.cloud.tencent.com/edgeone/purge"
-    },
-    {
-      "addedAt": "2025-12-26T08:01:15.775Z",
-      "description": "EdgeOne函数文档",
-      "id": "mjml1kovilmctjpxb4h",
-      "title": "EdgeOne CLI",
-      "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056"
-    },
-    {
-      "addedAt": "2026-01-11T16:01:41.687Z",
-      "description": "python包仓库",
-      "id": "mk9x91knbwv77am17zq",
-      "title": "Your projects · PyPI",
-      "url": "https://pypi.org/manage/projects/"
-    },
-    {
-      "description": "代码托管平台，用于存储和协作开发项目",
-      "id": "1",
-      "title": "GitHub",
-      "url": "https://github.com/"
-    },
-    {
-      "addedAt": "2025-09-04T03:18:11.717Z",
-      "description": "supabase远程免费数据库",
-      "id": "mf4u6adhyt7adeq9zm",
-      "title": "Supabase部署",
-      "url": "https://supabase.com/dashboard"
-    },
-    {
-      "addedAt": "2026-01-18T03:14:15.483Z",
-      "description": "google第三方登录",
-      "id": "mkj5x2rfqtmz4ksm5b",
-      "title": "Google Cloud 控制台",
-      "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project"
-    },
-    {
-      "addedAt": "2026-01-26T07:11:22.198Z",
-      "description": "邮件发送管理",
-      "id": "mkutwthypy2p5i8gyw",
-      "title": "resend",
-      "url": "https://resend.com/emails"
-    },
-    {
-      "addedAt": "2026-02-19T11:50:51.684Z",
-      "description": "",
-      "id": "mltegox0lsr8xay8kgn",
-      "title": "图像调整器 | 免费轻松在线调整图像大小",
-      "url": "https://imageresizer.com/zh"
-    },
-    {
-      "addedAt": "2026-03-18T10:24:10.170Z",
-      "description": "腾讯位置服务，提供天气接口",
-      "id": "mmvw97ei2hhuumg5wdk",
-      "title": "腾讯位置",
-      "url": "https://lbs.qq.com/dev/console/user/info"
-    },
-    {
-      "addedAt": "2026-04-10T08:53:06.061Z",
-      "description": "在线docker部署",
-      "id": "mnso4olpijywygtcjt",
-      "title": "Railway",
-      "url": "https://railway.com/project/4992903c-9a98-4a39-8d82-9efedb5a4752/service/921d24f6-2d28-4c48-ac67-0adc5473a653?environmentId=b575e574-7b31-46d7-ae92-4640f9c86a6d"
-    },
-    {
-      "addedAt": "2026-04-26T09:22:16.846Z",
-      "description": "vercel部署的ds2api",
-      "id": "mofk7u6mq8zjjyt6o5",
-      "title": "ds2api - Overview – Vercel",
-      "url": "https://vercel.com/liyao52033-7426s-projects/ds2api"
-    },
-    {
-      "addedAt": "2026-05-14T07:21:08.776Z",
-      "description": "render云部署服务",
-      "id": "mp55te3s0g0j9z1lmh8",
-      "title": "Render Dashboard",
-      "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14"
-    }
-  ],
-  "博客": [
-    {
-      "addedAt": "2025-08-11T08:20:51.641Z",
-      "description": "采用 Teek VitePress 主题构建，具备文档与博客二合一的功能，整体呈现简约、高效、灵活扩展的风格",
-      "id": "me6uf2ntfap9yttt42t",
-      "title": "One Blog",
-      "url": "https://onedayxyy.cn/"
-    },
-    {
-      "addedAt": "2025-08-11T08:23:50.415Z",
-      "description": "一个基于 VitePress 构建的博客与文档站点，采用 Teek 主题扩展并优化了默认功能，支持高效配置和灵活扩展",
-      "id": "me6uiwlq9igh8g2ktsn",
-      "title": "Hyde Blog",
-      "url": "https://teek.seasir.top/"
-    },
-    {
-      "addedAt": "2025-08-11T08:53:41.041Z",
-      "description": "一个结构清晰、技术内容丰富的个人博客，适合关注 Java 与前端开发、后端架构与工具链等领域的读者。",
-      "id": "me6vla9d168aygx8j9b",
-      "title": "Teeker Blog",
-      "url": "https://notes.teek.top/"
-    },
-    {
-      "addedAt": "2025-08-22T09:52:59.632Z",
-      "description": "aloglia搜索",
-      "id": "memnjxf41i56kxg1n48",
-      "title": "Algolia",
-      "url": "https://dashboard.algolia.com/apps/ATLKN4M9QW/explorer/browse/blog"
-    },
-    {
-      "addedAt": "2025-10-02T06:01:48.384Z",
-      "description": "hugo常见使用说明",
-      "id": "mg90cjmogpd40epmosr",
-      "title": "hugo手册",
-      "url": "https://jimmysong.io/book/hugo-handbook/site-structure/url-management/"
-    }
-  ],
-  "工具": [
-    {
-      "addedAt": "2025-09-06T09:17:33.013Z",
-      "description": "格式化并校验json",
-      "id": "mf81w4id6ccs9px56is",
-      "title": "JSON 校验",
-      "url": "https://jsonlint.com/"
-    },
-    {
-      "addedAt": "2025-09-13T08:57:44.274Z",
-      "description": "Material Symbols & Icons 图标",
-      "id": "mfi19lxusuyji3zcu6",
-      "title": "Material Symbols & Icons - Google Fonts",
-      "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C"
-    },
-    {
-      "addedAt": "2025-09-15T17:08:44.835Z",
-      "description": "全球网络加速服务商",
-      "id": "mfldor6rqx6l35uab1",
-      "title": "Freecat 🐾自由猫",
-      "url": "https://us.freecat.cloud/console"
-    },
-    {
-      "addedAt": "2026-07-12T13:16:30.429Z",
-      "description": "",
-      "id": "mrhthnbxt5l9d1z3fcp",
-      "title": "BPSUB Snippets订阅生成器",
-      "url": "https://bp.sub.cmliussss.net/"
-    }
-  ],
-  "接码平台": [
-    {
-      "addedAt": "2026-05-26T13:02:59.590Z",
-      "description": "接码平台",
-      "id": "mpmnb8cmo2o0y08a4u",
-      "title": "NexSMS Active",
-      "url": "https://user.nexsms.net/#/free-sms"
-    },
-    {
-      "addedAt": "2026-05-26T13:26:56.865Z",
-      "description": "接码平台",
-      "id": "mpmo61cxi203vzgvre8",
-      "title": "5sim",
-      "url": "https://5sim.net/zh/settings/prices"
-    },
-    {
-      "addedAt": "2026-05-26T13:28:10.270Z",
-      "description": "在线接收带有验证码的短信",
-      "id": "mpmo7lzyp1o4x89bu8g",
-      "title": "herosms",
-      "url": "https://hero-sms.com/cn"
-    },
-    {
-      "addedAt": "2026-05-26T13:35:10.191Z",
-      "description": "接码平台",
-      "id": "mpmogm0fhryqo4uju2i",
-      "title": "SMSPool",
-      "url": "https://www.smspool.net/purchase/quick_sms"
-    },
-    {
-      "addedAt": "2026-05-26T14:11:55.818Z",
-      "description": "购买虚拟话号码进行注册--用于发短信的临时号码",
-      "id": "mpmprvvu5po1lk0427",
-      "title": "smsbower",
-      "url": "https://smsbower.app/cn"
-    }
-  ],
-  "组件库": [
-    {
-      "addedAt": "2025-08-11T08:16:54.153Z",
-      "description": "基于 Vue 3，面向设计师和开发者的组件库",
-      "id": "me6u9zexfafjjxphh8h",
-      "title": "Element Plus",
-      "url": "https://element-plus.org/zh-CN/component/overview.html"
-    }
-  ],
   "链动小铺": [
     {
       "addedAt": "2026-05-19T12:37:29.818Z",
@@ -546,6 +176,376 @@
       "id": "mr682pr05t55t0rxlil",
       "title": "Gmail 无限别名 | Gmail Infinite Alias Generator | Gmail 分身 | 谷歌邮箱别名",
       "url": "https://gmail.31tu.com/"
+    }
+  ],
+  "接码平台": [
+    {
+      "addedAt": "2026-05-26T13:02:59.590Z",
+      "description": "接码平台",
+      "id": "mpmnb8cmo2o0y08a4u",
+      "title": "NexSMS Active",
+      "url": "https://user.nexsms.net/#/free-sms"
+    },
+    {
+      "addedAt": "2026-05-26T13:26:56.865Z",
+      "description": "接码平台",
+      "id": "mpmo61cxi203vzgvre8",
+      "title": "5sim",
+      "url": "https://5sim.net/zh/settings/prices"
+    },
+    {
+      "addedAt": "2026-05-26T13:28:10.270Z",
+      "description": "在线接收带有验证码的短信",
+      "id": "mpmo7lzyp1o4x89bu8g",
+      "title": "herosms",
+      "url": "https://hero-sms.com/cn"
+    },
+    {
+      "addedAt": "2026-05-26T13:35:10.191Z",
+      "description": "接码平台",
+      "id": "mpmogm0fhryqo4uju2i",
+      "title": "SMSPool",
+      "url": "https://www.smspool.net/purchase/quick_sms"
+    },
+    {
+      "addedAt": "2026-05-26T14:11:55.818Z",
+      "description": "购买虚拟话号码进行注册--用于发短信的临时号码",
+      "id": "mpmprvvu5po1lk0427",
+      "title": "smsbower",
+      "url": "https://smsbower.app/cn"
+    }
+  ],
+  "AI": [
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "ChatGPT：触手可及的 AI——体验全球最受欢迎的 AI 助手",
+      "id": "m8a1aaz28t1fm0tirw4",
+      "title": "chatgpt",
+      "url": "https://chatgpt.com/"
+    },
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "使用 Claude 更智能地编写代码 — 通过个性化帮助，更智能地编写代码",
+      "id": "m8a1aaz28t1fm0claude",
+      "title": "claude",
+      "url": "https://claude.ai/"
+    },
+    {
+      "addedAt": "2025-04-05T04:47:19.823Z",
+      "description": "扣子是新一代AI 大模型智能体开发平台。整合了插件、长短期记忆、工作流、卡片等丰富能力，扣子能帮你低门槛、快速搭建个性化或具备商业价值的智能体",
+      "id": "m93qffnzwgtfcsncoze",
+      "title": "扣子空间",
+      "url": "https://www.coze.com/home"
+    },
+    {
+      "addedAt": "2025-04-05T04:47:19.823Z",
+      "description": "",
+      "id": "m93qffnzwgtfcsncwts",
+      "title": "Augment Code – 用于实际工作的开发人员 AI",
+      "url": "https://www.augmentcode.com/"
+    },
+    {
+      "addedAt": "2025-03-22T09:05:30.983Z",
+      "description": "获取创意灵感，提升工作效率",
+      "id": "m8jzhjdzdf4cwqu5st9",
+      "title": "Gemini",
+      "url": "https://gemini.google.com/app"
+    },
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "Kimi 是一款AI智能助手，由Moonshot 自研的大语言模型驱动，支持在线搜索、深度思考、多模态推理和超长文本对话",
+      "id": "m8a1aaz28t1fm0kimi",
+      "title": "kimi",
+      "url": "https://www.kimi.com/"
+    },
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "豆包是你的AI 聊天智能对话问答助手，写作文案翻译编程全能工具。豆包为你答疑解惑，提供灵感，辅助创作，也可以和你畅聊任何你感兴趣的话题",
+      "id": "m8a1aaz28t1fm0doubao",
+      "title": "豆包",
+      "url": "https://www.doubao.com"
+    },
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "专注于研究世界领先的通用人工智能底层模型与技术，挑战人工智能前沿性难题",
+      "id": "m8a1aaz28t1fmdeepseek",
+      "title": "DeepSeek",
+      "url": "https://chat.deepseek.com/"
+    },
+    {
+      "addedAt": "2025-08-11T09:58:10.958Z",
+      "description": "腾讯云代码助手CodeBuddy，是一款辅助编码工具，基于混元代码大模型，提供技术对话、代码补全、代码诊断和优化等能力。为你生成优质代码，帮你解决技术难题，提升编码效率",
+      "id": "m8a1aaz28t1fmcodebuddy",
+      "title": "Codebuddy",
+      "url": "https://www.codebuddy.ai/"
+    },
+    {
+      "addedAt": "2025-03-30T12:02:32.711Z",
+      "description": "阿里通义千问",
+      "id": "m8vlc0hz2lmxcykf0k3",
+      "title": "Qwen",
+      "url": "https://chat.qwen.ai/"
+    },
+    {
+      "addedAt": "2025-04-03T11:00:54.330Z",
+      "description": "",
+      "id": "m918w5h60aa554tx0iyh",
+      "title": "通义 - 你的个人AI助手",
+      "url": "https://tongyi.aliyun.com/"
+    },
+    {
+      "addedAt": "2025-04-03T11:09:30.855Z",
+      "description": "",
+      "id": "m9197813wgdps2jwv3k",
+      "title": "通义万相_AI创意作画_AI绘画_人工智能-阿里云",
+      "url": "https://tongyi.aliyun.com/wanxiang/"
+    },
+    {
+      "addedAt": "2025-04-12T04:04:50.559Z",
+      "description": "",
+      "id": "m9dozrb3eu4nsa7hxjt",
+      "title": "阿里云百炼",
+      "url": "https://bailian.console.aliyun.com/#/home"
+    },
+    {
+      "addedAt": "2025-04-14T12:49:14.825Z",
+      "description": "",
+      "id": "m9h2lumh2tlpwlhkrdu",
+      "title": "Agent TARS：最佳多模态 AI 智能体",
+      "url": "https://agenttars.ai/zh"
+    },
+    {
+      "addedAt": "2025-05-29T02:01:51.617Z",
+      "description": "",
+      "id": "mb8qan0h6lvsjc87f7p",
+      "title": "在线抠图软件_图片去除背景 | remove.bg – remove.bg",
+      "url": "https://www.remove.bg/zh"
+    },
+    {
+      "addedAt": "2025-05-30T07:11:46.864Z",
+      "description": "",
+      "id": "mbagt1v491ho8dasn09",
+      "title": "OpenRouter",
+      "url": "https://openrouter.ai/"
+    },
+    {
+      "addedAt": "2025-03-15T09:58:29.734Z",
+      "description": "最大的 MCP 服务器集合，包括 Awesome MCP 服务器和 Claude MCP 集成",
+      "id": "m8a1apgm3gg06fzvklm",
+      "title": "MCP.so",
+      "url": "https://mcp.so/clients"
+    },
+    {
+      "addedAt": "2025-04-10T09:02:03.408Z",
+      "description": "开源模型。海量各模态AI开源模型。一站式模型开发&应用工具。高质量且免费的数据集。丰富有趣的AI应用体验",
+      "id": "m9b4q9w0kyiky3plo1",
+      "title": "魔搭社区",
+      "url": "https://modelscope.cn/organization/qwen"
+    },
+    {
+      "addedAt": "2026-02-28T11:41:31.595Z",
+      "description": "一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式",
+      "id": "mm693cqza2scydcfaq",
+      "title": "OpenCode",
+      "url": "https://opencode.ai/docs/zh-cn/"
+    },
+    {
+      "addedAt": "2026-03-02T08:40:02.244Z",
+      "description": "AI 语义搜索或关键字筛选，按分类浏览，按热度排序。所有技能采用开放的 SKILL.md 标准，一键安装",
+      "id": "mm8xhnt0o26ftxxabjo",
+      "title": "Agent Skills 市场 - Claude、Codex 和 ChatGPT Skills | SkillsMP",
+      "url": "https://skillsmp.com/zh"
+    },
+    {
+      "addedAt": "2026-03-23T16:20:40.678Z",
+      "description": "google AI网站",
+      "id": "mn3e6xra59m5tk3aswu",
+      "title": "Google AI Studio",
+      "url": "https://aistudio.google.com/apps"
+    }
+  ],
+  "工具": [
+    {
+      "addedAt": "2025-09-06T09:17:33.013Z",
+      "description": "格式化并校验json",
+      "id": "mf81w4id6ccs9px56is",
+      "title": "JSON 校验",
+      "url": "https://jsonlint.com/"
+    },
+    {
+      "addedAt": "2025-09-13T08:57:44.274Z",
+      "description": "Material Symbols & Icons 图标",
+      "id": "mfi19lxusuyji3zcu6",
+      "title": "Material Symbols & Icons - Google Fonts",
+      "url": "https://fonts.google.com/icons?hl=zh-cn&icon.query=danger&icon.size=24&icon.color=%2375FB4C"
+    },
+    {
+      "addedAt": "2025-09-15T17:08:44.835Z",
+      "description": "全球网络加速服务商",
+      "id": "mfldor6rqx6l35uab1",
+      "title": "Freecat 🐾自由猫",
+      "url": "https://us.freecat.cloud/console"
+    },
+    {
+      "addedAt": "2026-07-12T13:16:30.429Z",
+      "description": "",
+      "id": "mrhthnbxt5l9d1z3fcp",
+      "title": "BPSUB Snippets订阅生成器",
+      "url": "https://bp.sub.cmliussss.net/"
+    }
+  ],
+  "云服务": [
+    {
+      "addedAt": "2025-08-11T08:14:54.445Z",
+      "description": "EdgeOne是国内首款边缘安全加速平台。提供全面的安全防护、网络&应用性能加速",
+      "id": "me6u7f1pz8npq5nkp1o",
+      "title": "EdgeOne",
+      "url": "https://console.cloud.tencent.com/edgeone/purge"
+    },
+    {
+      "addedAt": "2025-12-26T08:01:15.775Z",
+      "description": "EdgeOne函数文档",
+      "id": "mjml1kovilmctjpxb4h",
+      "title": "EdgeOne CLI",
+      "url": "https://edgeone.cloud.tencent.com/pages/document/162936923278893056"
+    },
+    {
+      "addedAt": "2026-01-11T16:01:41.687Z",
+      "description": "python包仓库",
+      "id": "mk9x91knbwv77am17zq",
+      "title": "Your projects · PyPI",
+      "url": "https://pypi.org/manage/projects/"
+    },
+    {
+      "description": "代码托管平台，用于存储和协作开发项目",
+      "id": "1",
+      "title": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "addedAt": "2025-09-04T03:18:11.717Z",
+      "description": "supabase远程免费数据库",
+      "id": "mf4u6adhyt7adeq9zm",
+      "title": "Supabase部署",
+      "url": "https://supabase.com/dashboard"
+    },
+    {
+      "addedAt": "2026-01-18T03:14:15.483Z",
+      "description": "google第三方登录",
+      "id": "mkj5x2rfqtmz4ksm5b",
+      "title": "Google Cloud 控制台",
+      "url": "https://console.cloud.google.com/auth/clients?hl=zh-cn&project=supabase-484703&supportedpurview=project"
+    },
+    {
+      "addedAt": "2026-01-26T07:11:22.198Z",
+      "description": "邮件发送管理",
+      "id": "mkutwthypy2p5i8gyw",
+      "title": "resend",
+      "url": "https://resend.com/emails"
+    },
+    {
+      "addedAt": "2026-02-19T11:50:51.684Z",
+      "description": "",
+      "id": "mltegox0lsr8xay8kgn",
+      "title": "图像调整器 | 免费轻松在线调整图像大小",
+      "url": "https://imageresizer.com/zh"
+    },
+    {
+      "addedAt": "2026-03-18T10:24:10.170Z",
+      "description": "腾讯位置服务，提供天气接口",
+      "id": "mmvw97ei2hhuumg5wdk",
+      "title": "腾讯位置",
+      "url": "https://lbs.qq.com/dev/console/user/info"
+    },
+    {
+      "addedAt": "2026-04-10T08:53:06.061Z",
+      "description": "在线docker部署",
+      "id": "mnso4olpijywygtcjt",
+      "title": "Railway",
+      "url": "https://railway.com/project/4992903c-9a98-4a39-8d82-9efedb5a4752/service/921d24f6-2d28-4c48-ac67-0adc5473a653?environmentId=b575e574-7b31-46d7-ae92-4640f9c86a6d"
+    },
+    {
+      "addedAt": "2026-04-26T09:22:16.846Z",
+      "description": "vercel部署的ds2api",
+      "id": "mofk7u6mq8zjjyt6o5",
+      "title": "ds2api - Overview – Vercel",
+      "url": "https://vercel.com/liyao52033-7426s-projects/ds2api"
+    },
+    {
+      "addedAt": "2026-05-14T07:21:08.776Z",
+      "description": "render云部署服务",
+      "id": "mp55te3s0g0j9z1lmh8",
+      "title": "Render Dashboard",
+      "url": "https://dashboard.render.com/web/srv-d82n5hbrjlhs73dm41eg/deploys/dep-d82n5hjrjlhs73dm41mg?r=2026-05-14%4006%3A58%3A18%7E2026-05-14%4007%3A19%3A14"
+    }
+  ],
+  "组件库": [
+    {
+      "addedAt": "2025-08-11T08:16:54.153Z",
+      "description": "基于 Vue 3，面向设计师和开发者的组件库",
+      "id": "me6u9zexfafjjxphh8h",
+      "title": "Element Plus",
+      "url": "https://element-plus.org/zh-CN/component/overview.html"
+    }
+  ],
+  "博客": [
+    {
+      "addedAt": "2025-08-11T08:20:51.641Z",
+      "description": "采用 Teek VitePress 主题构建，具备文档与博客二合一的功能，整体呈现简约、高效、灵活扩展的风格",
+      "id": "me6uf2ntfap9yttt42t",
+      "title": "One Blog",
+      "url": "https://onedayxyy.cn/"
+    },
+    {
+      "addedAt": "2025-08-11T08:23:50.415Z",
+      "description": "一个基于 VitePress 构建的博客与文档站点，采用 Teek 主题扩展并优化了默认功能，支持高效配置和灵活扩展",
+      "id": "me6uiwlq9igh8g2ktsn",
+      "title": "Hyde Blog",
+      "url": "https://teek.seasir.top/"
+    },
+    {
+      "addedAt": "2025-08-11T08:53:41.041Z",
+      "description": "一个结构清晰、技术内容丰富的个人博客，适合关注 Java 与前端开发、后端架构与工具链等领域的读者。",
+      "id": "me6vla9d168aygx8j9b",
+      "title": "Teeker Blog",
+      "url": "https://notes.teek.top/"
+    },
+    {
+      "addedAt": "2025-08-22T09:52:59.632Z",
+      "description": "aloglia搜索",
+      "id": "memnjxf41i56kxg1n48",
+      "title": "Algolia",
+      "url": "https://dashboard.algolia.com/apps/ATLKN4M9QW/explorer/browse/blog"
+    },
+    {
+      "addedAt": "2025-10-02T06:01:48.384Z",
+      "description": "hugo常见使用说明",
+      "id": "mg90cjmogpd40epmosr",
+      "title": "hugo手册",
+      "url": "https://jimmysong.io/book/hugo-handbook/site-structure/url-management/"
+    }
+  ],
+  "个人站点": [
+    {
+      "addedAt": "2025-12-10T10:10:18.153Z",
+      "description": "一个面向开发者的技术博客，专注于提供实用的编程经验分享、项目实践指导和工具类插件资源",
+      "id": "me6u9zexfafvuepress",
+      "title": "编程随笔",
+      "url": "https://xiaoying.org.cn/"
+    },
+    {
+      "addedAt": "2025-12-10T10:11:16.134Z",
+      "description": "一个基于 VitePress 构建的技术文档与组件指南网站，核心目标是为开发者提供一体化的前端组件模板与开发工具文档。通过 Markdown 即可快速创建美观文档站、组件说明文档，或 Spring Boot 后端模板，以及博客插件支持",
+      "id": "me6ua4su2njc70v5rd8",
+      "title": "VitePress站点",
+      "url": "https://teek.xiaoying.org.cn/"
+    },
+    {
+      "addedAt": "2025-12-10T02:22:14.597Z",
+      "description": "一个基于 hugo 构建的技术文档与组件指库",
+      "id": "mizdvyo5k34au76521p",
+      "title": "组件库文档",
+      "url": "https://hugo.xiaoying.org.cn/"
     }
   ]
 }
