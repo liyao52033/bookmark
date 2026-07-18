@@ -1,13 +1,16 @@
 # 咪豆猫书签管理器
 
-集中展示与管理网络书签的静态站点，支持访客浏览、管理员登录后草稿编辑，并一键提交到 GitHub。可部署到 **EdgeOne Pages**。
+集中展示与管理网络书签的静态站点，支持访客浏览、管理员登录后草稿编辑，并一键提交到 GitHub。可部署到 **EdgeOne Pages** [![使用 EdgeOne Makers 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/makers/new?repository-url=https://github.com/liyao52033/bookmark)
 
 演示视频：
 
 - [YouTube](https://www.youtube.com/watch?v=EkAeZuujfMU)
+
 - [哔哩哔哩](https://www.bilibili.com/video/BV1kQRbYAECA/?share_source=copy_web&vd_source=23dec63201a606a868ef1de824367d80)
 
----
+  
+
+
 
 ## 功能概览
 
