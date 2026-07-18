@@ -24,7 +24,43 @@ const LS_KEYS = {
     email: 'bookmarkAdmin.email'
 };
 
-const LOGIN_URL = 'https://ssl.xiaoying.org.cn/login';
+// 登录配置：从运行时环境变量 window.__ENV__ / meta[name="env:KEY"] 读取
+// LOGIN_URL 必填；请求体字段名默认 email / password
+const DEFAULT_LOGIN_EMAIL_FIELD = 'email';
+const DEFAULT_LOGIN_PASSWORD_FIELD = 'password';
+
+function getEnv(name, fallback) {
+    const env = (typeof window !== 'undefined' && window.__ENV__) ? window.__ENV__ : {};
+    if (env[name] != null && String(env[name]).trim() !== '') {
+        return String(env[name]).trim();
+    }
+    const meta = typeof document !== 'undefined'
+        ? document.querySelector(`meta[name="env:${name}"]`)
+        : null;
+    if (meta) {
+        const content = (meta.getAttribute('content') || '').trim();
+        if (content) return content;
+    }
+    if (arguments.length >= 2) return fallback;
+    return undefined;
+}
+
+function getLoginUrl() {
+    const url = getEnv('LOGIN_URL');
+    if (!url) {
+        throw new Error('未配置环境变量 LOGIN_URL（请在 env.js 的 window.__ENV__ 中设置）');
+    }
+    return url;
+}
+
+function getLoginBodyFields(email, password) {
+    const emailField = getEnv('LOGIN_EMAIL_FIELD', DEFAULT_LOGIN_EMAIL_FIELD) || DEFAULT_LOGIN_EMAIL_FIELD;
+    const passwordField = getEnv('LOGIN_PASSWORD_FIELD', DEFAULT_LOGIN_PASSWORD_FIELD) || DEFAULT_LOGIN_PASSWORD_FIELD;
+    return {
+        [emailField]: email,
+        [passwordField]: password
+    };
+}
 
 // ---------- 工具 ----------
 
@@ -738,18 +774,26 @@ async function handleRemoteLogin() {
         return;
     }
 
+    let loginUrl;
+    try {
+        loginUrl = getLoginUrl();
+    } catch (err) {
+        setModalStatus('login-step1-status', 'error', err.message || '未配置 LOGIN_URL');
+        return;
+    }
+
     setModalStatus('login-step1-status', 'loading', '正在登录...');
     const btn = document.getElementById('login-step1-btn');
     btn.disabled = true;
 
     try {
-        const response = await fetch(LOGIN_URL, {
+        const response = await fetch(loginUrl, {
             method: 'POST',
             headers: {
                 'Accept': '*/*',
                 'Content-Type': 'text/plain;charset=UTF-8'
             },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify(getLoginBodyFields(email, password)),
             mode: 'cors',
             credentials: 'include'
         });
