@@ -103,6 +103,10 @@ function deepClone(obj) {
     return JSON.parse(JSON.stringify(obj));
 }
 
+function deepEqual(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
+}
+
 function generateId() {
     return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
@@ -1156,7 +1160,49 @@ function handleExitAdmin() {
     exitAdminMode();
 }
 
-// ---------- 提交 GitHub（唯一写操作） ----------
+// ---------- 提交 GitHub（唯一写操作，三方合并不覆盖其他端新增） ----------
+
+// 把远端相对登录快照新增的书签并入当前数据。
+// remote: 远端最新内容；snapshot: 登录时的快照；current: 当前编辑中的数据。
+// 规则：远端新增的书签并入本地；本地删除的书签不加回（冲突时提示）。
+function mergeRemoteAdditions(remote, snapshot, current) {
+    const merged = deepClone(current);
+    const conflicts = [];
+    let addedCount = 0;
+
+    Object.keys(remote || {}).forEach(cat => {
+        const remoteItems = remote[cat] || [];
+        if (!remoteItems.length) return;
+
+        const snapshotItems = (snapshot && snapshot[cat]) || [];
+        const currentIds = new Set((merged[cat] || []).map(i => i.id));
+        // 同分类中被本地删除的书签 id：视为本地删除优先，不加回
+        const deletedIds = new Set(
+            snapshotItems.filter(s => !currentIds.has(s.id)).map(s => s.id)
+        );
+
+        remoteItems.forEach(item => {
+            if (currentIds.has(item.id)) return; // 本地已有
+            if (deletedIds.has(item.id)) {
+                // 远端该书签仍是快照原样时，双方一致删除，不算冲突
+                const remoteItem = JSON.stringify(item);
+                const unchanged = snapshotItems.some(
+                    s => s.id === item.id && JSON.stringify(s) === remoteItem
+                );
+                if (!unchanged) {
+                    conflicts.push(`「${item.title}」(分类「${cat}」)：本地已删除但远端被更新过，已按本地删除处理`);
+                }
+                return;
+            }
+            if (!merged[cat]) merged[cat] = [];
+            merged[cat].push(item);
+            currentIds.add(item.id);
+            addedCount++;
+        });
+    });
+
+    return { merged, conflicts, addedCount };
+}
 
 async function commitToGitHub() {
     if (!isAdmin) return;
@@ -1197,7 +1243,32 @@ async function commitToGitHub() {
         const remote = await getRes.json();
         const sha = remote.sha;
 
-        const content = utf8_to_b64(JSON.stringify(bookmarksData, null, 2));
+        // 解析远端内容；若登录后有新增（其他设备/插件添加），先合并进来，
+        // 避免整体覆盖把新书签抹掉
+        let merged = bookmarksData;
+        let mergeNote = '';
+        try {
+            const remoteData = JSON.parse(b64_to_utf8(remote.content.replace(/\n/g, '')));
+            if (!deepEqual(remoteData, serverSnapshot)) {
+                const { merged: mergedData, conflicts, addedCount } =
+                    mergeRemoteAdditions(remoteData, serverSnapshot, bookmarksData);
+                merged = mergedData;
+                mergeNote = addedCount
+                    ? `（已自动合并远端新增的 ${addedCount} 条书签）`
+                    : '';
+                if (conflicts.length) {
+                    if (!confirm(
+                        `检测到登录后有冲突修改，已按本地优先处理：\n${conflicts.join('\n')}\n继续提交？`)) {
+                        return;
+                    }
+                }
+            }
+        } catch (e) {
+            console.error('解析远端书签数据失败，将按当前内容整体覆盖:', e);
+            mergeNote = '（注意：远端数据解析失败，本次为整体覆盖）';
+        }
+
+        const content = utf8_to_b64(JSON.stringify(merged, null, 2));
         const putRes = await fetch(baseUrl, {
             method: 'PUT',
             headers,
@@ -1223,9 +1294,12 @@ async function commitToGitHub() {
         if (putData.content && putData.content.sha) {
             fileSha = putData.content.sha;
         }
+        bookmarksData = merged;
         serverSnapshot = deepClone(bookmarksData);
         clearDirty();
-        alert('已提交到 GitHub');
+        renderBookmarks();
+        renderCategoryNav();
+        alert(`已提交到 GitHub${mergeNote}`);
     } catch (err) {
         console.error(err);
         alert(`提交失败: ${err.message}`);

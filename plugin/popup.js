@@ -242,111 +242,163 @@ function updateCategoryDropdown(bookmarksData) {
     }
 }
 
-// 保存书签
-function saveBookmark() {
-    const statusElement = document.getElementById('status');
+// 保存书签：先从 GitHub 拉取最新数据，追加后带最新 sha 上传，
+// 避免用过期的本地缓存导致 409 冲突或覆盖其他端的新书签
+async function saveBookmark() {
+    const title = document.getElementById('title').value.trim();
+    const description = document.getElementById('description').value.trim();
+    let category = document.getElementById('category').value;
 
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        const currentTab = tabs[0];
-        const title = document.getElementById('title').value.trim();
-        const description = document.getElementById('description').value.trim();
-        let category = document.getElementById('category').value;
+    if (!title) {
+        showStatus('error', '请输入标题');
+        return;
+    }
 
-        if (!title) {
-            showStatus('error', '请输入标题');
+    if (category === 'new' || category === '') {
+        const newCategory = document.getElementById('new-category').value.trim();
+        if (!newCategory) {
+            showStatus('error', '请输入新分类名称');
             return;
         }
+        category = newCategory;
+    }
 
-        if (category === 'new' || category === '') {
-            const newCategory = document.getElementById('new-category').value.trim();
-            if (!newCategory) {
-                showStatus('error', '请输入新分类名称');
-                return;
-            }
-            category = newCategory;
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+    const currentTab = tabs[0];
+
+    showStatus('loading', '正在同步最新书签...');
+
+    try {
+        await fetchLatestFromGitHub();
+
+        const data = await chrome.storage.local.get(['bookmarksData', 'fileSha']);
+        let bookmarksData = data.bookmarksData || {};
+        const fileSha = data.fileSha;
+
+        // 确保分类存在
+        if (!bookmarksData[category]) {
+            bookmarksData[category] = [];
         }
 
-        // 显示加载状态
-        showStatus('loading', '正在保存书签...');
+        // 创建新书签对象
+        const newBookmark = {
+            id: generateId(),
+            title: title,
+            url: currentTab.url,
+            description: description,
+            addedAt: new Date().toISOString()
+        };
 
-        // 从本地获取书签数据
-        chrome.storage.local.get(['bookmarksData', 'fileSha'], function (data) {
-            let bookmarksData = data.bookmarksData || {};
-            const fileSha = data.fileSha;
+        // 添加到相应分类
+        bookmarksData[category].push(newBookmark);
 
-            // 确保分类存在
-            if (!bookmarksData[category]) {
-                bookmarksData[category] = [];
+        // 保存到本地
+        await chrome.storage.local.set({ bookmarksData: bookmarksData });
+
+        showStatus('loading', '正在上传到GitHub...');
+
+        // 上传到GitHub
+        await uploadToGitHub(bookmarksData, fileSha);
+
+        // 更新分类下拉菜单（远端可能新增了分类）
+        updateCategoryDropdown(bookmarksData);
+    } catch (error) {
+        console.error('保存失败:', error);
+        showStatus('error', `保存失败: ${error.message}`);
+    }
+}
+
+// 从 GitHub 拉取最新书签数据，刷新本地缓存与 sha。
+// 文件不存在(404)时保留本地数据，上传时会自动创建。
+function fetchLatestFromGitHub() {
+    return new Promise((resolve, reject) => {
+        chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], function (settings) {
+            if (!settings.githubRepo || !settings.githubToken || !settings.jsonPath) {
+                reject(new Error('请先在设置页配置 GitHub 信息'));
+                return;
             }
 
-            // 创建新书签对象
-            const newBookmark = {
-                id: generateId(),
-                title: title,
-                url: currentTab.url,
-                description: description,
-                addedAt: new Date().toISOString()
-            };
+            const [owner, repo] = settings.githubRepo.split('/');
 
-            // 添加到相应分类
-            bookmarksData[category].push(newBookmark);
-
-            // 保存到本地
-            chrome.storage.local.set({ bookmarksData: bookmarksData }, function () {
-                // 上传到GitHub
-                uploadToGitHub(bookmarksData, fileSha);
-            });
+            fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${settings.jsonPath}`, {
+                headers: {
+                    'Authorization': `token ${settings.githubToken}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            })
+                .then(response => {
+                    if (response.status === 200) return response.json();
+                    if (response.status === 404) return null;
+                    return response.json().then(d => {
+                        throw new Error(d.message || `GitHub API返回错误: ${response.status}`);
+                    });
+                })
+                .then(fileData => {
+                    if (!fileData) { resolve(); return; }
+                    try {
+                        const bookmarksData = JSON.parse(
+                            b64_to_utf8(fileData.content.replace(/\n/g, '')));
+                        chrome.storage.local.set({
+                            bookmarksData: bookmarksData,
+                            fileSha: fileData.sha
+                        }, () => resolve());
+                    } catch (e) {
+                        reject(new Error('解析远端书签数据失败'));
+                    }
+                })
+                .catch(reject);
         });
     });
 }
 
 // 上传到GitHub
 function uploadToGitHub(bookmarksData, fileSha) {
-    console.log(bookmarksData);
-    console.log(fileSha);
-    chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], function (settings) {
-        console.log(settings);
-        if (!settings.githubRepo || !settings.githubToken || !settings.jsonPath) {
-            showStatus('error', '请先在设置中配置GitHub');
-            return;
-        }
+    return new Promise((resolve, reject) => {
+        chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], function (settings) {
+            if (!settings.githubRepo || !settings.githubToken || !settings.jsonPath) {
+                reject(new Error('请先在设置中配置GitHub'));
+                return;
+            }
 
-        const [owner, repo] = settings.githubRepo.split('/');
-        const content = utf8_to_b64(JSON.stringify(bookmarksData, null, 2)); // Base64编码
+            const [owner, repo] = settings.githubRepo.split('/');
+            const content = utf8_to_b64(JSON.stringify(bookmarksData, null, 2)); // Base64编码
 
-        const requestBody = {
-            message: '添加新书签',
-            content: content
-        };
+            const requestBody = {
+                message: '添加新书签',
+                content: content
+            };
 
-        // 如果有SHA，添加到请求中
-        if (fileSha) {
-            requestBody.sha = fileSha;
-        }
+            // 如果有SHA，添加到请求中
+            if (fileSha) {
+                requestBody.sha = fileSha;
+            }
 
-        fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${settings.jsonPath}`, {
-            method: 'PUT',
-            headers: {
-                'Authorization': `token ${settings.githubToken}`,
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestBody)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.content) {
-                    // 更新本地保存的SHA
-                    chrome.storage.local.set({ fileSha: data.content.sha });
-                    showStatus('success', '书签已保存并上传到GitHub');
-                } else if (data.message) {
-                    throw new Error(data.message);
-                }
+            fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${settings.jsonPath}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${settings.githubToken}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
             })
-            .catch(error => {
-                console.error('上传到GitHub失败:', error);
-                showStatus('error', `上传失败: ${error.message}`);
-            });
+                .then(response => response.json().then(data => ({ status: response.status, data })))
+                .then(({ status, data }) => {
+                    if (data.content) {
+                        // 更新本地保存的SHA
+                        chrome.storage.local.set({ fileSha: data.content.sha });
+                        resolve();
+                        showStatus('success', '书签已保存并上传到GitHub');
+                    } else if (status === 409 || (data.message && /sha/i.test(data.message))) {
+                        reject(new Error('远端文件已更新，请重新保存'));
+                    } else if (status === 401 || status === 403) {
+                        reject(new Error('Token 无效或权限不足'));
+                    } else {
+                        reject(new Error(data.message || `上传失败: ${status}`));
+                    }
+                })
+                .catch(reject);
+        });
     });
 }
 
