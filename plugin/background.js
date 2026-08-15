@@ -64,17 +64,17 @@ chrome.storage.onChanged.addListener((changes, area) => {
     }
 });
 
-// 使用指定分类保存书签：先拉取远端最新数据，再追加并上传
+// 使用指定分类保存书签：先拉取远端最新数据，追加并上传
 function saveBookmarkWithCategory(tab, category, linkUrl = null) {
     // 获取要保存的URL和标题
     const url = linkUrl || tab.url;
     const title = tab.title;
 
+    // 直接用拉取返回的数据（保持文件中的分类顺序），
+    // 不再经 storage 读回，避免 chrome.storage 重排对象键顺序
     fetchLatestFromGitHub()
-        .then(() => chrome.storage.local.get(['bookmarksData', 'fileSha']))
-        .then(data => {
-            let bookmarksData = data.bookmarksData || {};
-            const fileSha = data.fileSha;
+        .then(({ bookmarksData: latest, fileSha }) => {
+            const bookmarksData = latest;
 
             // 确保分类存在
             if (!bookmarksData[category]) {
@@ -93,7 +93,7 @@ function saveBookmarkWithCategory(tab, category, linkUrl = null) {
             // 添加到相应分类
             bookmarksData[category].push(newBookmark);
 
-            // 保存到本地后上传
+            // 同步到本地缓存后上传
             return new Promise(resolve => {
                 chrome.storage.local.set({ bookmarksData: bookmarksData }, () => {
                     resolve({ bookmarksData, fileSha });
@@ -108,8 +108,9 @@ function saveBookmarkWithCategory(tab, category, linkUrl = null) {
         });
 }
 
-// 从 GitHub 拉取最新书签数据，刷新本地缓存与 sha。
-// 文件不存在(404)时保留本地数据，上传时会自动创建。
+// 从 GitHub 拉取最新书签数据，刷新本地缓存与 sha，并把最新数据返回给调用方。
+// 渲染与上传必须用返回值：chrome.storage 存取会重排对象键顺序。
+// 文件不存在(404)时回退本地缓存数据。
 function fetchLatestFromGitHub() {
     return new Promise((resolve, reject) => {
         chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], (settings) => {
@@ -134,14 +135,24 @@ function fetchLatestFromGitHub() {
                     });
                 })
                 .then(fileData => {
-                    if (!fileData) { resolve(); return; }
+                    if (!fileData) {
+                        // 文件不存在：回退本地缓存
+                        chrome.storage.local.get(['bookmarksData', 'fileSha'], (local) => {
+                            resolve({
+                                bookmarksData: local.bookmarksData || {},
+                                fileSha: local.fileSha
+                            });
+                        });
+                        return;
+                    }
                     try {
                         const bookmarksData = JSON.parse(
                             b64_to_utf8(fileData.content.replace(/\n/g, '')));
+                        // 缓存仅供兜底，渲染与上传一律用返回值
                         chrome.storage.local.set({
                             bookmarksData: bookmarksData,
                             fileSha: fileData.sha
-                        }, () => resolve());
+                        }, () => resolve({ bookmarksData, fileSha: fileData.sha }));
                     } catch (e) {
                         reject(new Error('解析远端书签数据失败'));
                     }
