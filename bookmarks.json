@@ -213,6 +213,13 @@
       "url": "https://usapi6.com/free/index",
       "description": "api接码平台",
       "addedAt": "2026-08-15T05:03:53.647Z"
+    },
+    {
+      "id": "mstwzyckg21eve9s5cm",
+      "title": "Luban Sms",
+      "url": "https://lubansms.com/v2/keywordReceiveSms",
+      "description": "通用短信接收",
+      "addedAt": "2026-08-15T05:07:39.812Z"
     }
   ],
   "AI": [
