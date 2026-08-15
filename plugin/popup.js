@@ -192,24 +192,40 @@ function loadCurrentPageInfo() {
     });
 }
 
-// 加载分类下拉菜单
+// 加载分类下拉菜单：打开弹窗时先从 GitHub 拉最新数据，
+// 保证下拉里看到的是管理页最新提交过的分类，而不是过期缓存
 function loadCategories() {
-    chrome.storage.local.get('bookmarksData', function (data) {
-        if (data.bookmarksData) {
-            updateCategoryDropdown(data.bookmarksData);
-        } else {
-            // 如果本地没有数据，则尝试从GitHub加载
-            chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], function (settings) {
-                if (settings.githubRepo && settings.githubToken && settings.jsonPath) {
-                    testConnection();
+    chrome.storage.sync.get(['githubRepo', 'githubToken', 'jsonPath'], function (settings) {
+        if (!settings.githubRepo || !settings.githubToken || !settings.jsonPath) {
+            // 没有设置：若本地已有缓存则先展示，否则提示去配置
+            chrome.storage.local.get('bookmarksData', function (data) {
+                if (data.bookmarksData) {
+                    updateCategoryDropdown(data.bookmarksData);
                 } else {
-                    // 没有设置，显示提示
                     document.getElementById('category').innerHTML = `
                         <option value="">请先在设置中配置GitHub</option>
                     `;
                 }
             });
+            return;
         }
+
+        // 有配置：拉取远端最新（成功会刷新本地缓存），失败回退本地缓存
+        fetchLatestFromGitHub()
+            .then(() => chrome.storage.local.get('bookmarksData'))
+            .then(data => {
+                if (data.bookmarksData) {
+                    updateCategoryDropdown(data.bookmarksData);
+                }
+            })
+            .catch(error => {
+                console.error('拉取远端书签失败，使用本地缓存:', error);
+                chrome.storage.local.get('bookmarksData', function (data) {
+                    if (data.bookmarksData) {
+                        updateCategoryDropdown(data.bookmarksData);
+                    }
+                });
+            });
     });
 }
 
