@@ -610,6 +610,13 @@
       "url": "https://pan.cdn.ad/connect",
       "description": "",
       "addedAt": "2026-08-26T06:23:10.471Z"
+    },
+    {
+      "id": "mtsdkx2tqe2nvhx769",
+      "title": "Proxy List",
+      "url": "https://dashboard.webshare.io/14253460/proxy/list?authenticationMethod=%22username_password%22&connectionMethod=%22direct%22&proxyControl=%220%22&removeType=%22refresh_all%22",
+      "description": "",
+      "addedAt": "2026-09-08T07:56:01.781Z"
     }
   ],
   "组件库": [
